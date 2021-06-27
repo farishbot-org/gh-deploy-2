@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-
-import Head from "./components/head/Head";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
+
+import Head from "./components/head/Head";
 
 import Homepage from "./pages/homepage/Homepage";
 import About from "./pages/about/About";
 
 function App() {
-  // eslint-disable-next-line no-unused-vars
-  const [siteTitle, setSiteTitle] = useState("ok");
+  const [siteTitle, setSiteTitle] = useState("");
 
   return (
     <div className="App">
