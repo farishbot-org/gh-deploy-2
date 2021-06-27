@@ -7,7 +7,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2%;
   border-bottom: 1px solid lightgrey;
   z-index: 100;
+  user-select: none;
+}
+
+.logo-section {
+  padding: 0 2%;
+  height: 60%;
+}
+
+.logo {
+  height: 100%;
+}
+
+.navlinks-section {
+  padding: 0 2%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navlink {
+  margin: 0 8px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+.navlink:hover {
+  color: #85b14a;
+}
+
+.activenavlink {
+  transition-duration: 0.4s;
+  color: #3a7d42;
+}
+.activenavlink:hover {
+  color: #3a7d42;
+  text-decoration: none;
 }

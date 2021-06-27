@@ -1,0 +1,30 @@
+.error-page {
+  /* background: lightcyan; */
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-code{
+/* font-size: 72px; */
+height: 25vh;
+}
+
+.error-page-back-button{
+    background: #adcd4e;
+    /* color: white; */
+    border: 1px solid #adcd4e;
+    outline: none;
+    font-weight: 500;
+    /* border: none; */
+    margin: 35px 0;
+    cursor: pointer;
+    padding: 10px;
+    transition-duration: 0.4s;
+}
+.error-page-back-button:hover{
+    color:#3a7d42;
+    background: white;
+}

@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import "./homepage.css";
+
+import Hero from "../../components/homepage/Hero";
 
 const Homepage = ({ setSiteTitle }) => {
   useEffect(() => {
-    setSiteTitle("hom");
+    setSiteTitle("");
   }, []);
 
   return (
-    <div>
-      <Link to="/about">
-        Homeeee
-      </Link>
+    <div className="homepage">
+      <Hero />
+      <div className="homepage-section">
+        <span>hello</span>
+      </div>
     </div>
   );
 };

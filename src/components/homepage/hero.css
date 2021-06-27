@@ -1,0 +1,63 @@
+.hero-section {
+  height: 80vh;
+  width: 100vw;
+  /* margin-top: -2vh; */
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.each-slide {
+  height: 70vh;
+  display: flex;
+  width: 100%;
+}
+
+.each-slide-image {
+  user-select: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+.each-slide-image-info {
+  margin: 50px;
+  background: black;
+  min-height: 50px;
+  padding: 10px 20px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.each-slide-image-info-title {
+  font-weight: 500;
+}
+
+.each-slide-image-info-location {
+  font-size: 12px;
+}
+
+.each-slide-image-info-learnmore {
+  font-size: 10px;
+  margin: 4px;
+  width: 100%;
+  text-align: right;
+  fill: white;
+}
+
+.each-slide-image-info-learnmore-icon {
+  height: 12px;
+  width: 12px;
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const About = ({ setSiteTitle }) => {
   useEffect(() => {
-    setSiteTitle("hom");
+    setSiteTitle("About Us");
   }, []);
 
   return (

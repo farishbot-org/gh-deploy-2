@@ -1,0 +1,29 @@
+.footer {
+  border-top: 1px solid lightgrey;
+  background: white;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.footer-copyright-section {
+  padding: 10px 5%;
+  background: whitesmoke;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-copyright-section {
+    flex-direction: column;
+  }
+
+  .footer-copyright {
+    margin: 5px 0;
+  }
+}

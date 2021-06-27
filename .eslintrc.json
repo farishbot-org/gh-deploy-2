@@ -23,6 +23,7 @@
         "react/prop-types": "off",
         "class-methods-use-this": "off",
         "react/no-unescaped-entities": "off",
+        "react/jsx-props-no-spreading": "off",
         "react/no-access-state-in-setstate": "off",
         "jsx-a11y/no-autofocus": "off",
         "jsx-a11y/label-has-associated-control": "off",
