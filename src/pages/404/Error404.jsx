@@ -19,7 +19,6 @@ const Error404 = ({ setSiteTitle }) => {
 
   return (
     <div className="error-page">
-      {/* <h1>Grow More International Engineering Consultants</h1> */}
       <img className="error-code" src="/404.svg" alt="Page not found" />
       <button type="button" className="error-page-back-button" onClick={onClickButton}>Go Home</button>
     </div>

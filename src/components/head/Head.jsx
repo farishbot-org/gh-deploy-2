@@ -10,7 +10,7 @@ const Head = ({ title, content }) => {
 
   return (
     <head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <title>{title ? `${title} - Growmore International` : "Growmore International Engineering Consultants"}</title>
       <meta name="viewport" content="width=device-width, user-scalable=no" />
       <meta name="theme-color" content="#000000" />

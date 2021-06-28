@@ -17,6 +17,8 @@ import Error404 from "./pages/404/Error404";
 function App() {
   const [siteTitle, setSiteTitle] = useState("");
 
+  // window.addEventListener('console')
+
   return (
     <div className="App">
       <Router basename="/">
