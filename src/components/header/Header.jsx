@@ -12,10 +12,6 @@ export default class Header extends PureComponent {
         exact: true,
       },
       {
-        name: "About",
-        loc: "/about",
-      },
-      {
         name: "Services",
         loc: "/services",
       },

@@ -1,0 +1,73 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projects-page-heading {
+  font-weight: bold;
+  font-size: 32px;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.projects-page-projects-list {
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.projects-page-project-item {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgray;
+  padding: 20px 20px;
+  margin: 10px 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  user-select: none;
+  transition-duration: 0.4s;
+}
+
+.projects-page-project-item-image {
+  border-radius: 15px;
+  height: 160px;
+  border: 1px solid lightgray;
+}
+
+.projects-page-project-item-name {
+  transition-duration: 0.4s;
+  font-weight: 700;
+  margin-top: 10px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.projects-page-project-item-location {
+  width: 100%;
+  font-size: 12px;
+  margin: 10px 0;
+  color: grey;
+}
+
+.projects-page-project-item-learnmore {
+  border-top: 1px solid black;
+  font-size: 12px;
+}
+
+.projects-page-project-item:hover {
+  border: 1px solid grey;
+}
+
+.projects-page-project-item:hover .projects-page-project-item-name {
+  color: #3a7d42;
+}

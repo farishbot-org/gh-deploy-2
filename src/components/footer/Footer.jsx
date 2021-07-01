@@ -1,8 +1,14 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
 import "./footer.css";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const router = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [router.pathname]);
+
   const websiteMenu = [
     {
       name: "Home",

@@ -13,11 +13,12 @@ import Footer from "./components/footer/Footer";
 import Homepage from "./pages/homepage/Homepage";
 import About from "./pages/about/About";
 import Error404 from "./pages/404/Error404";
+import Projects from "./pages/projects/Projects";
+import ProjectContent from "./pages/projects/projectcontent/ProjectContent";
 
 function App() {
   const [siteTitle, setSiteTitle] = useState("");
-
-  // window.addEventListener('console')
+  // const router = useLocation();
 
   return (
     <div className="App">
@@ -26,11 +27,16 @@ function App() {
         <Header />
         <div className="page">
           <Switch>
-            <Route exact path="/" component={(props) => <Homepage {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/about" component={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/projects" component={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/projects/:id" component={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
-            <Route component={(props) => <Error404 {...props} setSiteTitle={setSiteTitle} />} />
+            <Route exact path="/" render={(props) => <Homepage {...props} setSiteTitle={setSiteTitle} />} />
+            <Route exact path="/about" render={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
+
+            {/* Projects */}
+            <Route exact path="/projects" render={(props) => <Projects {...props} setSiteTitle={setSiteTitle} />} />
+            <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
+            <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
+
+            {/* 404 */}
+            <Route render={(props) => <Error404 {...props} setSiteTitle={setSiteTitle} />} />
           </Switch>
         </div>
         <Footer />

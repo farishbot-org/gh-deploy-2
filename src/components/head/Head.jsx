@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 
 const Head = ({ title, content }) => {
   const router = useHistory();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [router.location.pathname]);
 
   return (
     <head>

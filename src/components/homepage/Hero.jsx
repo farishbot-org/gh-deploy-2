@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
-import { Fade as Slide } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import { Link } from "react-router-dom";
-// import Chance from "chance";
+import axios from "axios";
 
 import "./hero.css";
 
@@ -12,57 +12,45 @@ export default class Hero extends PureComponent {
     this.state = {
       sliderItems: [
         {
-        // link: "images/img-1.jpg",
+          // link: "images/img-1.jpg",
           link: "https://derbyde.ae/wp-content/uploads/2018/06/DD_Hosp_Cresent_4.jpg",
-          title: "CRESCENT DEVELOPMENT – OFFSHORE STRUCTURES LA LUNA HOTEL",
-          location: "Baku, Indonasia",
-          id: "popopo",
+          name: "CRESCENT DEVELOPMENT – OFFSHORE STRUCTURES LA LUNA HOTEL",
+          location: "BAKU, AZERBAIJAN",
+          id: "",
         },
         {
-        // link: "images/img-2.jpg",
+          // link: "images/img-2.jpg",
           link: "https://derbyde.ae/wp-content/uploads/2018/06/DD_Res_JAV_3.jpg",
-          title: "JEBEL ALI VILLAGE, PHASE II RESIDENTIAL DEVELOPMENT",
+          name: "JEBEL ALI VILLAGE, PHASE II RESIDENTIAL DEVELOPMENT",
           location: "Dubai, United Arab Emirates",
-          id: "popopo",
-        },
-        {
-        // link: "images/img-3.jpg",
-          link: "https://derbyde.ae/wp-content/uploads/2018/06/DD_Hosp_WaterRest_5.jpg",
-          title: "JUMEIRAH BEACH RESORT & SPA – WATER RESTAURANT",
-          location: "Dubai, United Arab Emirates",
-          id: "popopo",
-        },
-        {
-        // link: "images/img-4.jpg",
-          link: "https://derbyde.ae/wp-content/uploads/2018/06/DD_Public_GEMSBarsha_1.jpg",
-          title: "GEMS AMERICAN ACADEMY",
-          location: "Dubai, United Arab Emirates",
-          id: "popopo",
-        },
-        {
-        // link: "images/img-5.jpg",
-          link: "https://derbyde.ae/wp-content/uploads/2018/06/DD_Hangars_Salalah_3.jpg",
-          title: "SALALAH AIRPORT",
-          location: "Salalah, Oman",
-          id: "popopo",
-        },
-        {
-          link: "images/img-6.jpg",
-          title: "Auditaurium",
-          location: "Kerala, India",
-          id: "popopo",
+          id: "",
         },
       ],
     };
   }
 
   componentDidMount() {
-    // const chanceObj = new Chance();
-    // const { sliderItems } = this.state;
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner")
+      .then((response) => {
+        const data = [];
 
-    // this.setState({
-    //   sliderItems: chanceObj.shuffle(sliderItems),
-    // });
+        response.data.forEach((project) => {
+          const {
+            name, location, id, image,
+          } = project;
+          const pushData = {
+            name,
+            id,
+            link: image,
+            location,
+          };
+          data.push(pushData);
+        });
+
+        this.setState({
+          sliderItems: data,
+        });
+      });
   }
 
   render() {
@@ -70,7 +58,7 @@ export default class Hero extends PureComponent {
 
     return (
       <div className="hero-section">
-        <Slide
+        <Fade
           autoplay
           arrows={false}
           indicators
@@ -80,14 +68,14 @@ export default class Hero extends PureComponent {
             <div key={image.link} className="each-slide">
               <div className="each-slide-image" style={{ backgroundImage: `url(${image.link})` }}>
                 <Link className="each-slide-image-info" to={`/projects/${image.id}`}>
-                  <span className="each-slide-image-info-title">{image.title}</span>
+                  <span className="each-slide-image-info-title">{image.name}</span>
                   <span className="each-slide-image-info-location">{image.location}</span>
                   <span className="each-slide-image-info-learnmore">Learn More</span>
                 </Link>
               </div>
             </div>
           ))}
-        </Slide>
+        </Fade>
       </div>
     );
   }

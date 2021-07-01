@@ -33,6 +33,7 @@
   font-size: 16px;
   transition-duration: 0.4s;
 }
+
 .navlink:hover {
   color: #85b14a;
 }
@@ -41,6 +42,7 @@
   transition-duration: 0.4s;
   color: #3a7d42;
 }
+
 .activenavlink:hover {
   color: #3a7d42;
   text-decoration: none;

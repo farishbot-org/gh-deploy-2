@@ -12,9 +12,7 @@ const Homepage = ({ setSiteTitle }) => {
   return (
     <div className="homepage">
       <Hero />
-      <div className="homepage-section">
-        <span>hello</span>
-      </div>
+      <div className="homepage-section" />
     </div>
   );
 };
