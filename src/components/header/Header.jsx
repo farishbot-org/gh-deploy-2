@@ -19,6 +19,10 @@ export default class Header extends PureComponent {
         name: "Projects",
         loc: "/projects",
       },
+      {
+        name: "Heritage",
+        loc: "/heritage",
+      },
     ];
 
     return (

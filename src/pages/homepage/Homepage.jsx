@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import "./homepage.css";
 
 import Hero from "../../components/homepage/Hero";
+import News from "../../components/homepage/news/News";
 
 const Homepage = ({ setSiteTitle }) => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const Homepage = ({ setSiteTitle }) => {
   return (
     <div className="homepage">
       <Hero />
-      <div className="homepage-section" />
+      <News />
     </div>
   );
 };

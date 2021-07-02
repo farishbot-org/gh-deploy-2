@@ -35,6 +35,8 @@ function App() {
             <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
             <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
 
+            <Route exact path="/heritage" render={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
+
             {/* 404 */}
             <Route render={(props) => <Error404 {...props} setSiteTitle={setSiteTitle} />} />
           </Switch>

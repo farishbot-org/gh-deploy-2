@@ -30,7 +30,7 @@ export default class Hero extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner")
+    axios.get("http://localhost:5000/v1/growmore/projects/list/banner")
       .then((response) => {
         const data = [];
 

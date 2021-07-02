@@ -5,18 +5,23 @@ import Loading from "../../components/loading/Loading";
 
 import "./projects.css";
 
-const Projects = () => {
+const Projects = ({ setSiteTitle }) => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list")
+    setSiteTitle("Projects");
+    axios.get("http://localhost:5000/v1/growmore/projects/list")
       .then((response) => {
         if (response.data.length > 0) {
           setProjects(response.data);
         }
         setLoading(false);
       });
+
+    return () => {
+      setSiteTitle("");
+    };
   }, []);
 
   if (loading === false) {

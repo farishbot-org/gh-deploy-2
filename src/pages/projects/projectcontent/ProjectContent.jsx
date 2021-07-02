@@ -21,7 +21,7 @@ const ProjectContent = ({ setSiteTitle, match }) => {
   };
 
   useEffect(() => {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects", {
+    axios.get("http://localhost:5000/v1/growmore/projects/", {
       params: {
         id: match.params.id,
       },
