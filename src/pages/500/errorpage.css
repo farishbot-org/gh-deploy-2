@@ -1,0 +1,20 @@
+.error-500-page {
+  /* background: lavender; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.error-500-page-errorcode-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-500-page-errorcode {
+  font-size: 8rem;
+  font-weight: 900;
+}

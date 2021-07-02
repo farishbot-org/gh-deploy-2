@@ -12,3 +12,8 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+::selection {
+  background: transparent;
+  color: #3a7d42;
+}

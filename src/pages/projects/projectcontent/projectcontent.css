@@ -84,4 +84,9 @@
 
 .project-info-description {
   text-align: justify;
+    max-height: 45vh;
+  overflow: scroll;
+padding: 10px 15px;
+border: 1px solid lightgray;
+background: whitesmoke;
 }

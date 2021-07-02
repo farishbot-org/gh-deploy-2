@@ -27,3 +27,9 @@ p {
   display: inline-block;
   vertical-align: top;
 }
+
+.loading-message {
+  /* font-style: italic; */
+  opacity: .5;
+/* font-family: 'Courier New', Courier, monospace; */
+}

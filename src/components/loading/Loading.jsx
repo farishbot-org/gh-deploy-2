@@ -3,6 +3,11 @@ import React, { PureComponent } from "react";
 import "./laoding.css";
 
 export default class Loading extends PureComponent {
+  componentWillUnmount() {
+    const { noScroll } = this.props;
+    if (!noScroll) window.scrollTo(0, 0);
+  }
+
   render() {
     const { message } = this.props;
 
@@ -34,7 +39,7 @@ export default class Loading extends PureComponent {
             </path>
           </svg>
         </div>
-        <span>{message || "loading"}</span>
+        <span className="loading-message">{message || "Loading"}</span>
       </div>
     );
   }

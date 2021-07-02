@@ -33,7 +33,6 @@ const ProjectContent = ({ setSiteTitle, match }) => {
           } = response.data;
 
           setImages(imageURLs);
-          window.scrollTo(0, 0);
           setExisting(true);
           setProjectData(response.data);
           setTimeout(() => {
@@ -42,7 +41,8 @@ const ProjectContent = ({ setSiteTitle, match }) => {
         } else {
           setExisting(false);
         }
-      });
+      })
+      .catch(() => setExisting(false));
 
     return () => {
       setSiteTitle("");
