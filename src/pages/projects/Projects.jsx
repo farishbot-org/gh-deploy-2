@@ -43,7 +43,7 @@ const Projects = ({ setSiteTitle }) => {
         </div>
         <div className="projects-page-projects-list">
           {projects.map((project) => (
-            <Link title={project.name} className="projects-page-project-item" key={project.id} to={`/projects/${project.id}`}>
+            <Link title={project.name} className="projects-page-project-item" key={project.key} to={`/projects/${project.id}`}>
               <div className="projects-page-project-item-image" style={{ backgroundImage: `url(${project.image})` }} />
               <div className="projects-page-project-item-name">
                 <span>{project.name}</span>

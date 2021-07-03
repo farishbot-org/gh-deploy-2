@@ -25,11 +25,12 @@ export default class Hero extends PureComponent {
 
         response.data.forEach((project) => {
           const {
-            name, location, id, image,
+            name, location, id, image, key,
           } = project;
 
           const pushData = {
             name,
+            key,
             id,
             link: image,
             location,
@@ -74,7 +75,7 @@ export default class Hero extends PureComponent {
           pauseOnHover={false}
         >
           {sliderItems.map((image) => (
-            <div key={image.link} className="each-slide">
+            <div key={image.key} className="each-slide">
               <div className="each-slide-image" style={{ backgroundImage: `url(${image.link})` }}>
                 <Link className="each-slide-image-info" to={`/projects/${image.id}`}>
                   <span className="each-slide-image-info-title">{image.name}</span>

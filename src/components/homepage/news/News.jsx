@@ -13,8 +13,6 @@ export default class News extends PureComponent {
   }
 
   componentDidMount() {
-    // console.log("test");
-
     axios.get("http://localhost:5000/v1/growmore/news")
       .then((response) => {
         if (response.data.length > 0) {
@@ -22,25 +20,40 @@ export default class News extends PureComponent {
             newsContent: response.data,
           });
         }
+      })
+      .catch(() => {
+        this.setState({
+          newsContent: [],
+        });
       });
   }
 
   render() {
     const { newsContent } = this.state;
+
     return (
-      <div className="homepage-section">
-        <div className="homepage-news-section">
-          <h2>Latest Updates</h2>
-          {newsContent.map((news) => {
-            const { newscontent: content, imagelink, date } = news;
-            return (
-              <div className="news-card">
-                <div className="news-card-image" style={{ backgroundImage: `url(${imagelink})` }} />
-                <span>{content}</span>
-                <span>{date}</span>
-              </div>
-            );
-          })}
+      <div className="homepage-section section-short">
+        <div hidden={!(newsContent.length > 0)} className="homepage-news-section">
+          <div className="news-heading">
+            <span>LATEST UPDATES</span>
+          </div>
+          <div className="homepage-news-list">
+            {newsContent.map((news) => {
+              const {
+                newscontent: content, date, key,
+              } = news;
+              return (
+                <div key={key} className="news-item">
+                  <div className="news-item-date">
+                    <span>{date}</span>
+                  </div>
+                  <div className="news-item-newscontent">
+                    <span>{content}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

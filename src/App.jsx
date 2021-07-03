@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router, Route, Switch,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import "react-slideshow-image/dist/styles.css";
@@ -36,8 +34,17 @@ function App() {
             <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
 
             <Route exact path="/heritage" render={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
-
             <Route exact path="/500" render={(props) => <Error500 {...props} setSiteTitle={setSiteTitle} />} />
+
+            <Route
+              exact
+              path="/sitedata"
+              render={() => {
+                setSiteTitle("Site Data");
+                window.location.replace("https://docs.google.com/spreadsheets/d/1fMzf7JRwzBfSGNdK5x138tzBBzY6du94rRhbBplfcCU/edit#gid=1162050956");
+                return true;
+              }}
+            />
 
             {/* 404 */}
             <Route render={(props) => <Error404 {...props} setSiteTitle={setSiteTitle} />} />

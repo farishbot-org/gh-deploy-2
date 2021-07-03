@@ -13,7 +13,12 @@ const Homepage = ({ setSiteTitle }) => {
   return (
     <div className="homepage">
       <Hero />
-      <News />
+      <div className="homepage-section-horizontal section-short">
+        <div className="LHS" />
+        <div className="RHS">
+          <News />
+        </div>
+      </div>
     </div>
   );
 };

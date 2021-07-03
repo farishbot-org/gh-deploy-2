@@ -1,5 +1,4 @@
 .homepage {
-  /* background: lavenderblush; */
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -7,6 +6,30 @@
 }
 
 .homepage-section {
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
+  margin: 10vh 0;
+}
+
+.section-short {
+  min-height: 20vh;
+  width: 100%;
+  margin: 10vh 0;
+}
+
+.homepage-section-horizontal {
+  min-height: 90vh;
+  width: 100%;
+  margin: 10vh 0;
+  display: flex;
+}
+
+.RHS {
+  width: 50%;
+  margin: 0 50px;
+}
+
+.LHS {
+  margin: 0 50px;
+  width: 50%;
 }
