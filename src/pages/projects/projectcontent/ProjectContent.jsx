@@ -45,7 +45,7 @@ const ProjectContent = ({ setSiteTitle, match }) => {
       .catch(() => setExisting(false));
 
     return () => {
-      setSiteTitle("");
+      setSiteTitle(null);
     };
   }, []);
 

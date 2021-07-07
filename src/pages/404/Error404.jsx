@@ -3,11 +3,13 @@ import { useHistory } from "react-router-dom";
 
 import "./errorpage.css";
 
-const Error404 = ({ setSiteTitle }) => {
+const Error404 = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
     setSiteTitle("Page Not Found");
+    setSiteContent(null);
+
     return () => {
-      setSiteTitle("");
+      setSiteTitle(null);
     };
   }, []);
 

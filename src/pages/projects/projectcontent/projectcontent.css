@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   min-height: 90vh;
-  padding: 10vh 0;
+  padding: 0 0 10vh 0;
 }
 
 .project-info-LHS {
@@ -85,9 +85,9 @@
 
 .project-info-description {
   text-align: justify;
-    max-height: 45vh;
+  max-height: 45vh;
   overflow: scroll;
-padding: 10px 15px;
-border: 1px solid lightgray;
-background: whitesmoke;
+  padding: 10px 15px;
+  border: 1px solid lightgray;
+  background: whitesmoke;
 }

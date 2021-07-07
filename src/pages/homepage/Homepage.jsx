@@ -7,7 +7,7 @@ import News from "../../components/homepage/news/News";
 
 const Homepage = ({ setSiteTitle }) => {
   useEffect(() => {
-    setSiteTitle("");
+    setSiteTitle(null);
   }, []);
 
   return (

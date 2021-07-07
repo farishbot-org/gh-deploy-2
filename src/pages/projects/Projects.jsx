@@ -31,7 +31,7 @@ const Projects = ({ setSiteTitle }) => {
       });
 
     return () => {
-      setSiteTitle("");
+      setSiteTitle(null);
     };
   }, []);
 

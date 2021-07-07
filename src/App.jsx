@@ -16,38 +16,67 @@ import Projects from "./pages/projects/Projects";
 import ProjectContent from "./pages/projects/projectcontent/ProjectContent";
 
 function App() {
-  const [siteTitle, setSiteTitle] = useState("");
+  const [siteTitle, setSiteTitle] = useState(null);
+  const [siteContent, setSiteContent] = useState(null);
+
+  const routes = [
+    {
+      path: "/",
+      render: Homepage,
+    },
+    {
+      path: "/about",
+      render: About,
+    },
+    {
+      path: "/projects",
+      render: Projects,
+    },
+    {
+      path: "/projects/:id",
+      render: ProjectContent,
+    },
+    {
+      path: "/heritage",
+      render: About,
+    },
+    {
+      path: "/500",
+      render: Error500,
+    },
+    {
+      path: "/sitedata",
+      render: () => {
+        setSiteTitle("Site Data");
+        return window.location.replace("https://docs.google.com/spreadsheets/d/1fMzf7JRwzBfSGNdK5x138tzBBzY6du94rRhbBplfcCU/edit#gid=1162050956");
+      },
+    },
+    {
+      path: null,
+      render: Error404,
+    },
+  ];
 
   return (
     <div className="App">
       <Router basename="/">
-        <Head title={siteTitle} />
+        <Head title={siteTitle} content={siteContent} />
         <Header />
         <div className="page">
           <Switch>
-            <Route exact path="/" render={(props) => <Homepage {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/about" render={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
-
-            {/* Projects */}
-            <Route exact path="/projects" render={(props) => <Projects {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/projects/:id" render={(props) => <ProjectContent {...props} setSiteTitle={setSiteTitle} />} />
-
-            <Route exact path="/heritage" render={(props) => <About {...props} setSiteTitle={setSiteTitle} />} />
-            <Route exact path="/500" render={(props) => <Error500 {...props} setSiteTitle={setSiteTitle} />} />
-
-            <Route
-              exact
-              path="/sitedata"
-              render={() => {
-                setSiteTitle("Site Data");
-                window.location.replace("https://docs.google.com/spreadsheets/d/1fMzf7JRwzBfSGNdK5x138tzBBzY6du94rRhbBplfcCU/edit#gid=1162050956");
-                return true;
-              }}
-            />
-
-            {/* 404 */}
-            <Route render={(props) => <Error404 {...props} setSiteTitle={setSiteTitle} />} />
+            {routes.map((route) => (
+              <Route
+                exact
+                path={route.path}
+                render={(props) => (
+                  <route.render
+                    {...props}
+                    setSiteTitle={setSiteTitle}
+                    setSiteContent={setSiteContent}
+                  />
+                )}
+              />
+            ))}
           </Switch>
         </div>
         <Footer />

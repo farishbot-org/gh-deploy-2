@@ -12,16 +12,16 @@ export default class Header extends PureComponent {
         exact: true,
       },
       {
+        name: "Heritage",
+        loc: "/heritage",
+      },
+      {
         name: "Services",
         loc: "/services",
       },
       {
         name: "Projects",
         loc: "/projects",
-      },
-      {
-        name: "Heritage",
-        loc: "/heritage",
       },
     ];
 
