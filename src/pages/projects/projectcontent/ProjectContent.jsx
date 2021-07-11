@@ -7,7 +7,7 @@ import Error404 from "../../404/Error404";
 
 import "./projectcontent.css";
 
-const ProjectContent = ({ setSiteTitle, match }) => {
+const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   const [existing, setExisting] = useState(null);
   const [images, setImages] = useState([]);
   const [projectData, setProjectData] = useState({});
@@ -21,7 +21,7 @@ const ProjectContent = ({ setSiteTitle, match }) => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:5000/v1/growmore/projects/", {
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/", {
       params: {
         id: match.params.id,
       },
@@ -60,7 +60,7 @@ const ProjectContent = ({ setSiteTitle, match }) => {
           >
             {images.map((image) => (
               <div key={image} className="project-info-each-slide">
-                <div className="project-info-each-slide-image" style={{ backgroundImage: `url(${image})` }} />
+                <div className="project-info-each-slide-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${image}`})` }} />
               </div>
             ))}
           </Slide>
@@ -103,7 +103,7 @@ const ProjectContent = ({ setSiteTitle, match }) => {
 
   if (existing === false) {
     return (
-      <Error404 setSiteTitle={setSiteTitle} />
+      <Error404 setSiteTitle={setSiteTitle} setSiteContent={setSiteContent} />
     );
   }
 

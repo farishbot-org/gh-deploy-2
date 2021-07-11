@@ -13,7 +13,7 @@ export default class News extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:5000/v1/growmore/news")
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/news")
       .then((response) => {
         if (response.data.length > 0) {
           this.setState({

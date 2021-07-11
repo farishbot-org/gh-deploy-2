@@ -12,15 +12,16 @@
 }
 
 .section-short {
+  /* background: red; */
   min-height: 20vh;
   width: 100%;
   margin: 10vh 0;
 }
 
 .homepage-section-horizontal {
-  min-height: 90vh;
+  /* min-height: 90vh; */
   width: 100%;
-  margin: 10vh 0;
+  margin: 10vh;
   display: flex;
 }
 
@@ -32,4 +33,20 @@
 .LHS {
   margin: 0 50px;
   width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .homepage-section-horizontal {
+    flex-direction: column;
+  }
+
+  .LHS {
+    margin: 0;
+    width: 100%;
+  }
+
+  .RHS {
+    margin: 0;
+    width: 100%;
+  }
 }

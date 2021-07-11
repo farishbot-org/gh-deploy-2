@@ -1,0 +1,54 @@
+.heritage-homepage-banner {
+  background: url("https://cf.jare.io/?u=https://res.cloudinary.com/farish/image/upload/v1625905973/Growmore/akshay-vishwakarma-4Vo5arvxRwY-unsplash_wnowbu.jpg");
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  width: 100%;
+  filter: grayscale(100%);
+  height: 220px;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  user-select: none;
+  flex-direction: column;
+  line-height: 1.5;
+  text-align: center;
+  padding: 5vh 0;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  box-shadow: 5px 5px 12px darkgray;
+}
+
+.heritage-homepage-banner:hover {
+  box-shadow: 5px 5px 12px #c6d1d2;
+  filter: grayscale(50%);
+}
+
+.heritage-homepage-banner-typo {
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: 0.5rem;
+  text-shadow: 1px 1px 5px black;
+  width: 100%;
+}
+
+.heritage-homepage-banner-typo-long {
+  color: black;
+  background: whitesmoke;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.heritage-homepage-banner-typo-small {
+  color: black;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  transition-duration: 0.4s;
+}
+
+.heritage-homepage-banner:hover .heritage-homepage-banner-typo-small {
+  color: #3c3c3c;
+  border-bottom: 1px solid #3c3c3c;
+}

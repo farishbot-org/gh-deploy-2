@@ -1,10 +1,10 @@
 .error-500-page {
-  /* background: lavender; */
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   flex-direction: column;
+  user-select: none;
 }
 
 .error-500-page-errorcode-section {

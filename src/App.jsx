@@ -14,6 +14,9 @@ import Error404 from "./pages/404/Error404";
 import Error500 from "./pages/500/Error500";
 import Projects from "./pages/projects/Projects";
 import ProjectContent from "./pages/projects/projectcontent/ProjectContent";
+import Heritage from "./pages/heritage/Heritage";
+import Services from "./pages/services/Services";
+import ContactUs from "./pages/contactus/ContactUs";
 
 function App() {
   const [siteTitle, setSiteTitle] = useState(null);
@@ -38,11 +41,19 @@ function App() {
     },
     {
       path: "/heritage",
-      render: About,
+      render: Heritage,
     },
     {
       path: "/500",
       render: Error500,
+    },
+    {
+      path: "/services",
+      render: Services,
+    },
+    {
+      path: "/contact",
+      render: ContactUs,
     },
     {
       path: "/sitedata",
@@ -66,6 +77,7 @@ function App() {
           <Switch>
             {routes.map((route) => (
               <Route
+                key={route.path || "nopath"}
                 exact
                 path={route.path}
                 render={(props) => (

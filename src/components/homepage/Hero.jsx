@@ -19,7 +19,7 @@ export default class Hero extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:5000/v1/growmore/projects/list/banner")
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner")
       .then((response) => {
         const data = [];
 
@@ -48,8 +48,8 @@ export default class Hero extends PureComponent {
 
         this.setState({
           error: {
-            code: response.status,
-            message: response.data,
+            code: response.status || "503",
+            message: response.data.message || "Internal Server Error",
           },
         });
       });
@@ -76,7 +76,7 @@ export default class Hero extends PureComponent {
         >
           {sliderItems.map((image) => (
             <div key={image.key} className="each-slide">
-              <div className="each-slide-image" style={{ backgroundImage: `url(${image.link})` }}>
+              <div className="each-slide-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${image.link}`})` }}>
                 <Link className="each-slide-image-info" to={`/projects/${image.id}`}>
                   <span className="each-slide-image-info-title">{image.name}</span>
                   <span className="each-slide-image-info-location">{image.location}</span>

@@ -16,16 +16,12 @@ const Footer = () => {
       exact: true,
     },
     {
-      name: "About",
-      location: "/about",
+      name: "Heritage",
+      location: "/heritage",
     },
     {
-      name: "Services",
-      location: "/services",
-    },
-    {
-      name: "Contact Us",
-      location: "/contact",
+      name: "Projects",
+      location: "/projects",
     },
   ];
 
@@ -41,6 +37,10 @@ const Footer = () => {
     {
       name: "Contact Us",
       location: "/contact",
+    },
+    {
+      name: "Terms of Service",
+      location: "/tandc",
     },
   ];
 

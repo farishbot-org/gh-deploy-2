@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 import Loading from "../../components/loading/Loading";
@@ -12,10 +12,9 @@ const Projects = ({ setSiteTitle }) => {
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
 
-  // const router = useHistory();
   useEffect(() => {
     setSiteTitle("Projects");
-    axios.get("http://localhost:5000/v1/growmore/projects/list")
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list")
       .then((response) => {
         if (response.data.length > 0) {
           setProjects(response.data);
@@ -26,7 +25,7 @@ const Projects = ({ setSiteTitle }) => {
         const { response } = err;
         setError({
           code: response.status,
-          message: response.data,
+          message: response.data.message,
         });
       });
 
@@ -43,8 +42,8 @@ const Projects = ({ setSiteTitle }) => {
         </div>
         <div className="projects-page-projects-list">
           {projects.map((project) => (
-            <Link title={project.name} className="projects-page-project-item" key={project.key} to={`/projects/${project.id}`}>
-              <div className="projects-page-project-item-image" style={{ backgroundImage: `url(${project.image})` }} />
+            <Link key={project.key} title={project.name} className="projects-page-project-item" to={`/projects/${project.id}`}>
+              <div className="projects-page-project-item-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${project.image}`})` }} />
               <div className="projects-page-project-item-name">
                 <span>{project.name}</span>
               </div>
