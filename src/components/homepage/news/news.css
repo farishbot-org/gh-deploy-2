@@ -16,7 +16,8 @@
   margin: 20px;
   border: 1px solid lightgray;
   max-height: 198px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .news-item {

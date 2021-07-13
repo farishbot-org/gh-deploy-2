@@ -2,9 +2,9 @@
   display: flex;
   width: 100%;
   height: 75vh;
-  /* border: 1px solid whitesmoke; */
+  /* border: 4px solid #3a7d42; */
   box-shadow: 4px 4px 20px darkslategrey;
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -107,15 +107,24 @@
   /* width: 80%; */
   height: 42px;
   outline: none;
-  /* padding: 0 20px; */
+  padding: 0 20px;
+  transition-duration: 0.4s;
+  color: #1c1c1c;
+  font-weight: 700;
 }
 
 .contact-page-contact-section-RHS-form-input:focus {
   border: 2px solid #3a7d42;
 }
 
+.contact-page-contact-section-RHS-form-input:disabled{
+  /* background: local; */
+  /* opacity: .75; */
+  /* color: darkgrey; */
+}
+
 .form-input-subject {
-  width: 100%;
+  /* width: 100%; */
   /* width: 320px; */
   height: 45px;
   outline: none;
@@ -123,6 +132,8 @@
 
 .form-input-textarea {
   height: 90px;
+  padding: 10px 20px;
+  text-align: justify;
 }
 
 .form-input-submit {
