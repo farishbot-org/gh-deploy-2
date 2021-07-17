@@ -119,7 +119,7 @@
 
 .contact-page-contact-section-RHS-form-input:disabled{
   /* background: local; */
-  /* opacity: .75; */
+  opacity: .75;
   /* color: darkgrey; */
 }
 
@@ -147,9 +147,28 @@
   transition-duration: 0.4s;
 }
 
-.form-input-submit:hover {
+.form-input-submit:hover :focus {
   border: 2px solid #3a7d42;
   color: #3a7d42;
   background: white;
   margin: 10px 0;
 }
+
+.form-input-submit:focus {
+  border: 2px solid #3a7d42;
+  color: #3a7d42;
+  background: white;
+  margin: 10px 0;
+}
+
+
+
+.form-input-submit-success:disabled {
+  font-weight: bold;
+  width: 30%;
+  border: 2px solid #3a7d42;
+  color: #3a7d42;
+  background: white;
+  margin: 10px 0;
+}
+

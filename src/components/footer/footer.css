@@ -1,5 +1,4 @@
 .footer {
-  border-top: 1px solid lightgrey;
   background: white;
   bottom: 0;
   display: flex;
@@ -65,7 +64,6 @@
 .footer-copyright-section {
   padding: 10px 5%;
   background: white;
-  border-top: 1px solid lightgrey;
   display: flex;
   align-items: center;
   justify-content: space-between;

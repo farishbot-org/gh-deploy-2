@@ -21,7 +21,20 @@ export default class ContactForm extends PureComponent {
       message: "",
       disableForm: false,
       success: null,
+      existingSubject: false,
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      const { existingSubject } = this.props;
+      if (existingSubject) {
+        this.setState({
+          subject: `Service Enquiry: ${decodeURI(existingSubject)}`,
+          existingSubject: true,
+        });
+      }
+    }, 1000);
   }
 
   onChangeName(e) {
@@ -70,6 +83,10 @@ export default class ContactForm extends PureComponent {
       name, company, email, phone, subject, message,
     } = this.state;
 
+    this.setState({
+      success: "Sending",
+    });
+
     const data = {
       name, company, email, phone, subject, message,
     };
@@ -79,7 +96,6 @@ export default class ContactForm extends PureComponent {
         if (response.data) {
           this.setState({
             success: "Message Sent!",
-            // disableForm: false,
           });
         }
       });
@@ -87,7 +103,7 @@ export default class ContactForm extends PureComponent {
 
   render() {
     const {
-      disableForm, name, company, email, phone, subject, message, success,
+      disableForm, name, company, email, phone, subject, message, success, existingSubject,
     } = this.state;
 
     return (
@@ -148,7 +164,7 @@ export default class ContactForm extends PureComponent {
               <label className="contact-page-contact-section-RHS-forminput-item-label">Subject*</label>
               <input
                 type="text"
-                disabled={disableForm}
+                disabled={existingSubject ? true : disableForm}
                 value={subject}
                 onChange={this.onChangeSubject}
                 required
@@ -173,7 +189,7 @@ export default class ContactForm extends PureComponent {
             type="submit"
             disabled={disableForm}
             value={success || "Send Message"}
-            className="contact-page-contact-section-RHS-form-input form-input-submit"
+            className={success ? "contact-page-contact-section-RHS-form-input form-input-submit-success" : "contact-page-contact-section-RHS-form-input form-input-submit"}
           />
         </form>
       </div>

@@ -4,7 +4,7 @@
 }
 .page {
   overflow-x: hidden;
-  padding: 0 5% 10vh 5%;
+  padding: 0 5% 5vh 5%;
   display: flex;
   min-height: 90vh;
   margin-top: 10vh;

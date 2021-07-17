@@ -38,10 +38,6 @@ const Footer = () => {
       name: "Contact Us",
       location: "/contact",
     },
-    {
-      name: "Terms of Service",
-      location: "/tandc",
-    },
   ];
 
   return (

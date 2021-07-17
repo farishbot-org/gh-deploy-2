@@ -12,38 +12,39 @@
   user-select: none;
 }
 
-.logo-section {
+.header-logo-section {
   padding: 0 2%;
   height: 60%;
 }
 
-.logo {
+.header-logo {
   height: 100%;
 }
 
-.navlinks-section {
+.header-navlinks-section {
   padding: 0 2%;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.navlink {
+.header-navlink {
   margin: 0 8px;
   font-size: 16px;
   transition-duration: 0.4s;
+  letter-spacing: .03rem;
 }
 
-.navlink:hover {
+.header-navlink:hover {
   color: #85b14a;
 }
 
-.activenavlink {
+.header-activenavlink {
   transition-duration: 0.4s;
   color: #3a7d42;
 }
 
-.activenavlink:hover {
+.header-activenavlink:hover {
   color: #3a7d42;
   text-decoration: none;
 }

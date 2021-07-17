@@ -18,3 +18,8 @@ a {
   background: transparent;
   color: #3a7d42;
 }
+
+/* *:focus {
+  border: 1px dotted darkgrey;
+  transition-duration: 0.4s;
+} */

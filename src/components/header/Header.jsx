@@ -27,13 +27,23 @@ export default class Header extends PureComponent {
 
     return (
       <div className="header">
-        <div className="logo-section">
+        <div className="header-logo-section">
           <Link to="/">
-            <img title="GROWMORE INTERNATIONAL" className="logo" src="/logo-full.svg" alt="logo" />
+            <img title="Growmore International" className="header-logo" src="/logo-full.svg" alt="logo" />
           </Link>
         </div>
-        <div className="navlinks-section">
-          {menuItems.map((item) => <NavLink key={item.loc} exact={item.exact} to={item.loc} activeClassName="activenavlink" className="navlink">{item.name}</NavLink>)}
+        <div className="header-navlinks-section">
+          {menuItems.map((item) => (
+            <NavLink
+              key={item.loc}
+              exact={item.exact}
+              to={item.loc}
+              activeClassName="header-activenavlink"
+              className="header-navlink"
+            >
+              {item.name}
+            </NavLink>
+          ))}
         </div>
       </div>
     );

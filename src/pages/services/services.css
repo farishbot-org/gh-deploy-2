@@ -1,14 +1,11 @@
 .service-page {
-  /* background: lavender; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .service-page-header-section {
-  margin: 5vh 0;
-  /* font-size: 18px; */
+  margin: 8vh 0 2vh 0;
   display: flex;
   flex-direction: column;
 }
@@ -20,9 +17,46 @@
 
 .service-page-header-long {
   margin: 2vh 0;
-    font-size: 18px;
+  font-size: 18px;
   width: 50%;
   text-align: justify;
   opacity: 0.5;
+}
 
+.service-page-services-section {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-page-services-subsection {
+  min-height: 50px;
+  margin: 10vh 0;
+}
+
+.service-page-services-subsection-header {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  margin-bottom: 32px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  background: whitesmoke;
+  box-shadow: 2px 4px 10px darkgrey;
+  font-size: 18px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.service-page-services-subsection-header svg {
+  margin: 0 10px;
+  height: 24px;
+}
+
+.service-page-services-subsection-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

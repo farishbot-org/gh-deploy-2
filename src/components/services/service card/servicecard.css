@@ -1,0 +1,67 @@
+.service-page-servicecard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  align-items: center;
+  box-shadow: 2px 4px 10px darkgrey;
+  width: 280px;
+  height: 160px;
+  border-radius: 10px;
+  margin: 20px;
+  background: white;
+  text-align: center;
+  user-select: none;
+  transition-duration: 0.4s;
+}
+
+.service-page-servicecard:hover {
+  box-shadow: 0px 0px 4px darkgray;
+}
+
+.service-page-servicecard-icon-section {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-page-servicecard-icon-section svg {
+  height: 75%;
+  opacity: 0.5;
+}
+
+.service-page-servicecard-title {
+  height: 30%;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+
+.service-page-servicecard-description {
+  font-size: 14px;
+  height: 30%;
+  color: darkgray;
+  font-weight: 500;
+}
+
+.service-page-servicecard-link {
+  font-size: 12px;
+  color: #3a7d42;
+  background: lightgreen;
+  cursor: pointer;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 10px;
+}
+
+.service-page-servicecard-link:hover {
+  text-decoration: underline;
+}

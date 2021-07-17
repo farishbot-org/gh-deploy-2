@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./contact.css";
 
 import ContactSection from "../../components/contact/ContactSection";
 
-const ContactUs = ({ setSiteTitle, setSiteContent }) => {
+const ContactUs = ({ setSiteTitle, setSiteContent, location }) => {
+  const [subject, setSubject] = useState(null);
   useEffect(() => {
     setSiteTitle("Contact Us");
     setSiteContent("Contact us for your enquiries.");
+    const { search } = location;
+    if (search) setSubject(search.replace("?", ""));
 
     return () => {
       setSiteTitle(null);
@@ -21,7 +24,7 @@ const ContactUs = ({ setSiteTitle, setSiteContent }) => {
         <span className="contact-page-header">Contact Us</span>
         <span className="contact-page-header-small">Get in touch today with Customer Service to learn how we can assist you with your next project.</span>
       </div>
-      <ContactSection />
+      <ContactSection existingSubject={subject} />
     </div>
   );
 };

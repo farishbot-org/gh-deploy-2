@@ -84,10 +84,12 @@
 }
 
 .project-info-description {
+  margin-top: 10px;
   text-align: justify;
   max-height: 45vh;
   overflow: scroll;
   padding: 10px 15px;
   border: 1px solid lightgray;
-  background: whitesmoke;
+  font-size: 14px;
+  line-height: 1.5;
 }

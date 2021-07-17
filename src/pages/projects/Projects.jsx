@@ -7,7 +7,7 @@ import Error500 from "../500/Error500";
 
 import "./projects.css";
 
-const Projects = ({ setSiteTitle }) => {
+const Projects = ({ setSiteTitle, setSiteContent }) => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
@@ -31,6 +31,7 @@ const Projects = ({ setSiteTitle }) => {
 
     return () => {
       setSiteTitle(null);
+      setSiteContent(null);
     };
   }, []);
 
@@ -42,15 +43,16 @@ const Projects = ({ setSiteTitle }) => {
         </div>
         <div className="projects-page-projects-list">
           {projects.map((project) => (
-            <Link key={project.key} title={project.name} className="projects-page-project-item" to={`/projects/${project.id}`}>
+            <div key={project.key} title={project.name} className="projects-page-project-item">
               <div className="projects-page-project-item-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${project.image}`})` }} />
-              <div className="projects-page-project-item-name">
-                <span>{project.name}</span>
+              <div className="projects-page-project-item-data-section">
+                <span className="projects-page-project-item-name">{project.name}</span>
+                <span className="projects-page-project-item-location">{project.location}</span>
+                <div className="projects-page-project-item-action-section">
+                  <Link to={`/projects/${project.id}`} className="projects-page-project-item-action-button">LEARN MORE</Link>
+                </div>
               </div>
-              <div className="projects-page-project-item-location">
-                <span>{project.location}</span>
-              </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

@@ -108,7 +108,7 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   }
 
   return (
-    <Loading message="Loading Project Data" />
+    <Loading message={`Loading Project Data ${match.params.id}`} />
   );
 };
 
