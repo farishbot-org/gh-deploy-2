@@ -1,0 +1,38 @@
+.careers-page {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.careers-page-hero {
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  background: url('https://res.cloudinary.com/farish/image/upload/v1626501233/Growmore/DD_Hosp_Kaaki_2_pmxrc2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.careers-page-hero-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 50px 0;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 4px grey;
+}
+
+.careers-page-list-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

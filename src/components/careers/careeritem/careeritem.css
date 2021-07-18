@@ -1,0 +1,110 @@
+.careers-page-list-item-unavailable {
+  background: whitesmoke;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2%;
+  height: 72px;
+  transition-duration: 0.4s;
+  user-select: none;
+  border: 1px solid lightgray;
+}
+
+.careers-page-list-item {
+  background: whitesmoke;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 2%;
+  height: 72px;
+  transition-duration: 0.4s;
+  user-select: none;
+  border: 1px solid lightgray;
+}
+
+.careers-page-list-item:hover {
+  border: 1px solid whitesmoke;
+  box-shadow: 2px 2px 5px darkgrey;
+}
+
+.careers-page-list-item-position {
+  font-weight: 500;
+  width: 33%;
+}
+
+.careers-page-list-item-centre-section {
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+
+.careers-page-list-item-experience-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.careers-page-list-item-experience-section-main {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.careers-page-list-item-experience-section-small {
+  font-size: 10px;
+  color: grey;
+  font-style: italic;
+}
+
+.careers-page-list-item-location-section {
+  width: 50%;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: grey;
+  color: grey;
+}
+
+.careers-page-list-item-location-section svg {
+  height: 12px;
+  margin: 0 5px;
+}
+
+.careers-page-list-item-mail {
+  text-align: right;
+  width: 33%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.careers-page-list-item-mail-Link {
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.4s;
+  fill: grey;
+  color: grey;
+  padding: 0 12px;
+}
+
+.careers-page-list-item-mail-Link span {
+  margin: 0 -4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.careers-page-list-item-mail-Link svg {
+  margin: 0 20px;
+  margin-bottom: 5px;
+}
+
+.careers-page-list-item-mail-Link:hover {
+  fill: black;
+  color: black;
+}

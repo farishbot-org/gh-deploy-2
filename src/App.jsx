@@ -17,6 +17,7 @@ import ProjectContent from "./pages/projects/projectcontent/ProjectContent";
 import Heritage from "./pages/heritage/Heritage";
 import Services from "./pages/services/Services";
 import ContactUs from "./pages/contactus/ContactUs";
+import Careers from "./pages/careers/Careers";
 
 function App() {
   const [siteTitle, setSiteTitle] = useState(null);
@@ -54,6 +55,10 @@ function App() {
     {
       path: "/contact",
       render: ContactUs,
+    },
+    {
+      path: "/careers",
+      render: Careers,
     },
     {
       path: "/sitedata",

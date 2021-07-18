@@ -43,16 +43,20 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
         </div>
         <div className="projects-page-projects-list">
           {projects.map((project) => (
-            <div key={project.key} title={project.name} className="projects-page-project-item">
+            <Link to={`/projects/${project.id}`} key={project.key} title={project.name} className="projects-page-project-item">
               <div className="projects-page-project-item-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${project.image}`})` }} />
               <div className="projects-page-project-item-data-section">
-                <span className="projects-page-project-item-name">{project.name}</span>
-                <span className="projects-page-project-item-location">{project.location}</span>
+                <div className="projects-page-project-item-name-section">
+                  <div className="projects-page-project-item-name">{project.name}</div>
+                </div>
+                <div className="projects-page-project-item-location-section">
+                  <span className="projects-page-project-item-location">{project.location}</span>
+                </div>
                 <div className="projects-page-project-item-action-section">
-                  <Link to={`/projects/${project.id}`} className="projects-page-project-item-action-button">LEARN MORE</Link>
+                  <div className="projects-page-project-item-action-button">LEARN MORE</div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

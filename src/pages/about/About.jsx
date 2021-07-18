@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import "./about.css";
+
+import Hero from "../../components/about/hero/Hero";
+import Leader from "../../components/about/leader/Leader";
+import Careers from "../../components/about/careers/Careers";
 
 const About = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
@@ -11,10 +16,10 @@ const About = ({ setSiteTitle, setSiteContent }) => {
   }, []);
 
   return (
-    <div>
-      <Link to="/">
-        About
-      </Link>
+    <div className="about-page">
+      <Hero />
+      <Leader />
+      <Careers />
     </div>
   );
 };

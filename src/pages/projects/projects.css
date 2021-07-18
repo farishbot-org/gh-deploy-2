@@ -53,18 +53,22 @@
   justify-content: center;
 }
 
-.projects-page-project-item-name {
+.projects-page-project-item-name-section {
   font-weight: 700;
   margin: 5px 0;
-  min-height: 50px;
   display: flex;
   align-items: center;
   font-size: 14px;
 }
 
-.projects-page-project-item-location {
+.projects-page-project-item-name:hover {
+  text-decoration: underline;
+}
+
+
+.projects-page-project-item-location-section {
   font-size: 12px;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
   color: grey;
 }
 
@@ -80,12 +84,12 @@
 .projects-page-project-item-action-button {
   color: darkgreen;
   background: lightgreen;
-  padding: 8px 15px;
+  padding: 4px 10px;
   font-size: 10px;
   font-weight: 700;
   border-radius: 5px;
   transition-duration: 0.4s;
-  letter-spacing: .02rem;
+  letter-spacing: 0.02rem;
 }
 
 .projects-page-project-item-action-button:hover {

@@ -1,0 +1,24 @@
+.about-page-careers-section {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.about-page-careers-section-main-typo {
+  font-weight: bold;
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.about-page-careers-section-career-link {
+  color: green;
+  margin: 20px 0;
+}
+
+.about-page-careers-section-career-link:hover {
+  text-decoration: underline;
+}
