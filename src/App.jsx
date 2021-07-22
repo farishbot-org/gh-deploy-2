@@ -18,6 +18,7 @@ import Heritage from "./pages/heritage/Heritage";
 import Services from "./pages/services/Services";
 import ContactUs from "./pages/contactus/ContactUs";
 import Careers from "./pages/careers/Careers";
+import Vastushastra from "./pages/vastu/Vastushastra";
 
 function App() {
   const [siteTitle, setSiteTitle] = useState(null);
@@ -59,6 +60,10 @@ function App() {
     {
       path: "/careers",
       render: Careers,
+    },
+    {
+      path: "/vastu",
+      render: Vastushastra,
     },
     {
       path: "/sitedata",

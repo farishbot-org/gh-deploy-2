@@ -19,6 +19,7 @@
   border-radius: 10px;
   transition-duration: 0.4s;
   box-shadow: 5px 5px 12px darkgray;
+  margin-bottom: 10vh ;
 }
 
 .heritage-homepage-banner:hover {

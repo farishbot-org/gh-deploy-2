@@ -1,0 +1,43 @@
+.vastu-page-section {
+  width: 100%;
+  margin:  10vh 0 5vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%; */
+  flex-wrap: wrap;
+}
+
+.vastu-page-section-image {
+  height: 50vh;
+  width:45%;
+  background: url("https://cf.jare.io/?u=https://res.cloudinary.com/farish/image/upload/v1626954648/Growmore/brahmasthan-vaastu-home_dyc4sx.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  padding: 0 0px;
+  border-radius: 10px;
+}
+.vastu-page-section-RHS {
+  padding: 0 0px;
+  width: 45%;
+  /* background: wheat; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.vastu-page-section-RHS-maintypo {
+  font-weight: bold;
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.vastu-page-section-RHS-typo{
+    width: 80%;
+    /* text-align: justify; */
+}

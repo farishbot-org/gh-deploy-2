@@ -20,7 +20,7 @@ export default class CareerItem extends PureComponent {
       <div className="careers-page-list-item">
         <span className="careers-page-list-item-position">{position}</span>
         <div className="careers-page-list-item-centre-section">
-          <div className="careers-page-list-item-location-section">
+          <div hidden={!location} className={!location ? true : "careers-page-list-item-location-section"}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z" /></svg>
             <span>{location}</span>
           </div>

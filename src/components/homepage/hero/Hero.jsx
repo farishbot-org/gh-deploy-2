@@ -5,8 +5,8 @@ import axios from "axios";
 
 import "./hero.css";
 
-import Error500 from "../../pages/500/Error500";
-import Loading from "../loading/Loading";
+import Error500 from "../../../pages/500/Error500";
+import Loading from "../../loading/Loading";
 
 export default class Hero extends PureComponent {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class Hero extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:5000/v1/growmore/projects/list/banner")
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner")
       .then((response) => {
         const data = [];
 

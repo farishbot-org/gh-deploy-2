@@ -91,7 +91,7 @@ export default class ContactForm extends PureComponent {
       name, company, email, phone, subject, message,
     };
 
-    axios.post("http://localhost:5000/v1/growmore/contact", data)
+    axios.post("https://amnuz.herokuapp.com/v1/growmore/contact", data)
       .then((response) => {
         if (response.data) {
           this.setState({

@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
 
-import "../../../pages/heritage/heritage.css";
+import "./heritage.css";
 
 export default class HeritageBanner extends PureComponent {
   render() {

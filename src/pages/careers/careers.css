@@ -36,3 +36,32 @@
   display: flex;
   flex-direction: column;
 }
+
+.careers-page-email-section{
+  /* background: lavender; */
+  margin: 50px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
+.careers-page-email-section svg{
+  height: 48px;
+  margin: 10px 0;
+  fill: grey;
+}
+
+.careers-page-email-link{
+  color: green;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.careers-page-email-link:hover{
+  text-decoration: underline;
+
+}

@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 
 import "./homepage.css";
 
-import Hero from "../../components/homepage/Hero";
+import Hero from "../../components/homepage/hero/Hero";
 import News from "../../components/homepage/news/News";
 import About from "../../components/homepage/about/About";
 
 import HeritageBanner from "../../components/homepage/Heritage Banner/HeritageBanner";
+import Architects from "../../components/homepage/architects/Architects";
 
 const Homepage = ({ setSiteTitle }) => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Homepage = ({ setSiteTitle }) => {
         </div>
       </div>
       <HeritageBanner />
+      <Architects />
     </div>
   );
 };

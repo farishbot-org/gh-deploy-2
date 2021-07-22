@@ -87,9 +87,9 @@
   margin-top: 10px;
   text-align: justify;
   max-height: 45vh;
-  overflow: scroll;
   padding: 10px 15px;
   border: 1px solid lightgray;
   font-size: 14px;
   line-height: 1.5;
+  overflow-y: scroll;
 }

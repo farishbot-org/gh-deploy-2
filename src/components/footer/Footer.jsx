@@ -31,12 +31,12 @@ const Footer = () => {
       location: "/about",
     },
     {
-      name: "Services",
-      location: "/services",
+      name: "Contact",
+      location: "/contact",
     },
     {
-      name: "Contact Us",
-      location: "/contact",
+      name: "Services",
+      location: "/services",
     },
     {
       name: "Careers",

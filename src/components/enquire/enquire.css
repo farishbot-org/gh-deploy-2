@@ -1,0 +1,45 @@
+.enquire-section {
+  background: whitesmoke;
+  border-radius: 15px;
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.enquire-section-typo-section {
+  margin: 10px 20px;
+  font-weight: 900;
+  font-size: 42px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.enquire-section-typo-cta {
+  color: #3a7d42;
+}
+
+.enquire-section-cta-button-section {
+  margin: 15px 20px;
+}
+
+.enquire-section-cta-button {
+    margin-right: 10px ;
+  background: #3a7d42;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  letter-spacing: 0.05rem;
+  border: 1px solid #3a7d42;
+  transition-duration: 0.4s;
+}
+
+.enquire-section-cta-button:hover {
+  color: #3a7d42;
+  background: transparent;
+}

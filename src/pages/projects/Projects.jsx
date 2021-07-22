@@ -14,7 +14,7 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
 
   useEffect(() => {
     setSiteTitle("Projects");
-    axios.get("http://localhost:5000/v1/growmore/projects/list")
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list")
       .then((response) => {
         if (response.data.length > 0) {
           setProjects(response.data);

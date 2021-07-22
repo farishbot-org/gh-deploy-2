@@ -1,0 +1,26 @@
+.vastu-page-hero {
+  background: url("https://cf.jare.io/?u=https://res.cloudinary.com/farish/image/upload/v1626951990/Growmore/ashish-sangai-EjRTM6inhBM-unsplash_jereps.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  z-index: 2;
+}
+
+.vastu-page-hero-maintypo-section {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.vastu-page-hero-maintypo {
+  background: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
