@@ -7,20 +7,20 @@ export default class Header extends PureComponent {
   render() {
     const menuItems = [
       {
-        name: "Services",
-        loc: "/services",
-      },
-      {
         name: "Projects",
         loc: "/projects",
+      },
+      {
+        name: "Services",
+        loc: "/services",
       },
       {
         name: "Heritage",
         loc: "/heritage",
       },
       {
-        name: "Vastu",
-        loc: "/vastu",
+        name: "Vasthu",
+        loc: "/vasthu",
       },
     ];
 

@@ -7,7 +7,7 @@
 .projects-page-heading {
   font-weight: bold;
   font-size: 42px;
-  margin: 20px 0;
+  margin: 4vh 0 20px 0;
   padding-bottom: 20px;
   border-bottom: 1px solid lightgrey;
 }
@@ -18,81 +18,4 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: center;
-}
-
-.projects-page-project-item {
-  margin: 20px 20px;
-  background: white;
-  border-radius: 10px;
-  border: 1px solid lightgray;
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  user-select: none;
-  transition-duration: 0.4s;
-  overflow: hidden;
-}
-
-.projects-page-project-item:focus {
-  border: 1px solid black;
-}
-
-.projects-page-project-item-image {
-  width: 100%;
-  height: 160px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.projects-page-project-item-data-section {
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.projects-page-project-item-name-section {
-  font-weight: 700;
-  margin: 5px 0;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-}
-
-.projects-page-project-item-name:hover {
-  text-decoration: underline;
-}
-
-
-.projects-page-project-item-location-section {
-  font-size: 12px;
-  margin: 0 0 5px 0;
-  color: grey;
-}
-
-.projects-page-project-item:hover {
-  box-shadow: 0 0 12px lightgray;
-}
-
-.projects-page-project-item-action-section {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.projects-page-project-item-action-button {
-  color: darkgreen;
-  background: lightgreen;
-  padding: 4px 10px;
-  font-size: 10px;
-  font-weight: 700;
-  border-radius: 5px;
-  transition-duration: 0.4s;
-  letter-spacing: 0.02rem;
-}
-
-.projects-page-project-item-action-button:hover {
-  background: #3a7d42;
-  color: white;
 }

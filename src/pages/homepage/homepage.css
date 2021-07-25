@@ -8,18 +8,16 @@
 .homepage-section {
   min-height: 90vh;
   width: 100%;
-  margin: 10vh 0;
+  margin: 10vh 0 5vh 0;
 }
 
 .section-short {
-  /* background: red; */
   min-height: 20vh;
   width: 100%;
-  margin: 10vh 0;
+  margin: 10vh 0 5vh 0;
 }
 
 .homepage-section-horizontal {
-  /* min-height: 90vh; */
   width: 100%;
   margin: 10vh;
   display: flex;

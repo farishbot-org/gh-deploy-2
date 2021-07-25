@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
-import { Link } from "react-router-dom";
 
 import "./architects.css";
+
+import Card from "./card/Card";
 
 export default class Architects extends PureComponent {
   render() {
@@ -11,7 +12,7 @@ export default class Architects extends PureComponent {
         country: "Kerala, India",
         description: "Narayanan Namboodiripad is a member of the Kanippayyur family, which is famous for its practice of Traditional Architecture, Temple Building, Astrology and related studies.",
         image: "https://res.cloudinary.com/farish/image/upload/v1626947178/Growmore/maxresdefault_tdhibw.jpg",
-        link: "/vastu",
+        link: "/vasthu",
       },
       {
         name: "Yasmeen Lari",
@@ -21,6 +22,7 @@ export default class Architects extends PureComponent {
         link: "/heritage",
       },
     ];
+
     return (
       <div className="homepage-architects-section">
         <div className="homepage-architects-section-header">
@@ -28,14 +30,14 @@ export default class Architects extends PureComponent {
         </div>
         <div className="homepage-architects-section-architects-list">
           {architects.map((item) => (
-            <Link to={item.link} key={item.name} className="homepage-architects-section-architects-list-item">
-              <div style={{ backgroundImage: `url('https://cf.jare.io/?u=${item.image}')` }} className="homepage-architects-section-architects-list-item-image" />
-              <div className="homepage-architects-section-architects-list-item-details">
-                <span className="homepage-architects-section-architects-list-item-details-name">{item.name}</span>
-                <span className="homepage-architects-section-architects-list-item-details-country">{item.country}</span>
-                <span className="homepage-architects-section-architects-list-item-details-description">{item.description}</span>
-              </div>
-            </Link>
+            <Card
+              key={item.link}
+              name={item.name}
+              link={item.link}
+              image={item.image}
+              description={item.description}
+              country={item.country}
+            />
           ))}
 
         </div>

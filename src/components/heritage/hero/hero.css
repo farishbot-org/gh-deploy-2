@@ -1,0 +1,22 @@
+.heritage-page-hero {
+  background: url("https://images.adsttc.com/media/images/5eaf/1b64/b357/65d8/fd00/0015/slideshow/al_Jazeera.jpg?1588534109");
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.heritage-page-hero-maintypo {
+  font-weight: 700;
+  font-size: 42px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 15px;
+}

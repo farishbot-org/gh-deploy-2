@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
+import Card from "../../components/projects/card/Card";
 
 import Loading from "../../components/loading/Loading";
 import Error500 from "../500/Error500";
@@ -24,8 +25,8 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
       .catch((err) => {
         const { response } = err;
         setError({
-          code: response.status,
-          message: response.data.message,
+          code: response.status ? response.status : "503",
+          message: response.data.message ? response.data.message : "Cannot reach the server",
         });
       });
 
@@ -39,24 +40,17 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
     return (
       <div className="projects-page">
         <div className="projects-page-heading">
-          <span>Completed Projects</span>
+          <span>Projects</span>
         </div>
         <div className="projects-page-projects-list">
           {projects.map((project) => (
-            <Link to={`/projects/${project.id}`} key={project.key} title={project.name} className="projects-page-project-item">
-              <div className="projects-page-project-item-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${project.image}`})` }} />
-              <div className="projects-page-project-item-data-section">
-                <div className="projects-page-project-item-name-section">
-                  <div className="projects-page-project-item-name">{project.name}</div>
-                </div>
-                <div className="projects-page-project-item-location-section">
-                  <span className="projects-page-project-item-location">{project.location}</span>
-                </div>
-                <div className="projects-page-project-item-action-section">
-                  <div className="projects-page-project-item-action-button">LEARN MORE</div>
-                </div>
-              </div>
-            </Link>
+            <Card
+              key={project.key}
+              id={project.id}
+              name={project.name}
+              image={project.image}
+              location={project.location}
+            />
           ))}
         </div>
       </div>

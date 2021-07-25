@@ -8,6 +8,7 @@ import About from "../../components/homepage/about/About";
 
 import HeritageBanner from "../../components/homepage/Heritage Banner/HeritageBanner";
 import Architects from "../../components/homepage/architects/Architects";
+import Newsletter from "../../components/homepage/newsletter/Newsletter";
 
 const Homepage = ({ setSiteTitle }) => {
   useEffect(() => {
@@ -27,6 +28,7 @@ const Homepage = ({ setSiteTitle }) => {
       </div>
       <HeritageBanner />
       <Architects />
+      <Newsletter />
     </div>
   );
 };

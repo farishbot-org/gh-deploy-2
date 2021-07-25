@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
 
+import "./heritage.css";
+
+import Hero from "../../components/heritage/hero/Hero";
+
+import Enquire from "../../components/enquire/Enquire";
+
 const Heritage = ({ setSiteTitle }) => {
   useEffect(() => {
     setSiteTitle("Heritage");
@@ -9,8 +15,9 @@ const Heritage = ({ setSiteTitle }) => {
   }, []);
 
   return (
-    <div>
-      <span>Heritage</span>
+    <div className="heritage-page">
+      <Hero />
+      <Enquire subject="Heritage" />
     </div>
   );
 };

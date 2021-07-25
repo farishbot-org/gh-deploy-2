@@ -17,12 +17,12 @@ export default class Enquire extends PureComponent {
     const chacneObj = new Chance();
 
     const ctaMessages = [
+      "Sounds good?",
+      "Sounds great?",
       "Are you ready?",
       "Ready to dive in?",
-      "Sounds good?",
-      "Sounds interesting?",
-      "Sounds great?",
       "Want to learn more?",
+      "Sounds interesting?",
       "Got questions to ask?",
     ];
 
@@ -32,9 +32,9 @@ export default class Enquire extends PureComponent {
   }
 
   render() {
+    const { subject } = this.props;
     const { ctaMessage } = this.state;
 
-    const { subject } = this.props;
     return (
       <div className="enquire-section">
         <div className="enquire-section-typo-section">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
@@ -18,11 +18,21 @@ import Heritage from "./pages/heritage/Heritage";
 import Services from "./pages/services/Services";
 import ContactUs from "./pages/contactus/ContactUs";
 import Careers from "./pages/careers/Careers";
-import Vastushastra from "./pages/vastu/Vastushastra";
+import Vasthushastra from "./pages/vasthu/Vasthushastra";
 
 function App() {
   const [siteTitle, setSiteTitle] = useState(null);
   const [siteContent, setSiteContent] = useState(null);
+  const [mobile, setMobile] = useState(false);
+
+  const checkMobile = () => {
+    const { width } = window.screen;
+    if (width <= 800) setMobile(true);
+  };
+
+  useEffect(() => {
+    checkMobile();
+  }, []);
 
   const routes = [
     {
@@ -62,8 +72,8 @@ function App() {
       render: Careers,
     },
     {
-      path: "/vastu",
-      render: Vastushastra,
+      path: "/vasthu",
+      render: Vasthushastra,
     },
     {
       path: "/sitedata",
@@ -82,7 +92,7 @@ function App() {
     <div className="App">
       <Router basename="/">
         <Head title={siteTitle} content={siteContent} />
-        <Header />
+        <Header mobile={mobile} />
         <div className="page">
           <Switch>
             {routes.map((route) => (
@@ -93,6 +103,7 @@ function App() {
                 render={(props) => (
                   <route.render
                     {...props}
+                    mobile={mobile}
                     setSiteTitle={setSiteTitle}
                     setSiteContent={setSiteContent}
                   />

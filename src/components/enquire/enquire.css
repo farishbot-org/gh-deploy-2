@@ -4,7 +4,6 @@
   width: 100%;
   min-height: 30vh;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
 }
@@ -14,7 +13,6 @@
   font-weight: 900;
   font-size: 42px;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
 }
@@ -28,7 +26,7 @@
 }
 
 .enquire-section-cta-button {
-    margin-right: 10px ;
+  margin-right: 10px;
   background: #3a7d42;
   color: white;
   padding: 10px 20px;
@@ -37,6 +35,7 @@
   letter-spacing: 0.05rem;
   border: 1px solid #3a7d42;
   transition-duration: 0.4s;
+  user-select: none;
 }
 
 .enquire-section-cta-button:hover {
