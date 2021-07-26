@@ -1,0 +1,32 @@
+.heritage-page-section1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.heritage-page-section1-LHS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40vh;
+  font-size: 56px;
+  font-weight: 900;
+}
+
+.heritage-page-section1-RHS {
+  background: url("https://res.cloudinary.com/farish/image/upload/v1627241070/Growmore/1280px-Yasmeen_Lari_Houses_kuvleb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  border-radius: 25px;
+}

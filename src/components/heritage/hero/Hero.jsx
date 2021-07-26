@@ -7,7 +7,7 @@ export default class Hero extends PureComponent {
     return (
       <div className="heritage-page-hero">
         <div className="heritage-page-hero-maintypo">
-          <span>Place yourself at the heart of Heritage</span>
+          {/* <span>Place yourself at the heart of Heritage</span> */}
         </div>
       </div>
     );

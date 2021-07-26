@@ -13,10 +13,9 @@
 }
 
 .heritage-page-hero-maintypo {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 42px;
   padding: 10px 20px;
-  background: black;
   color: white;
-  border-radius: 15px;
+  border-radius: 5px;
 }

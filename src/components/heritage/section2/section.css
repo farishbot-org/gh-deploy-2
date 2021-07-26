@@ -1,0 +1,87 @@
+.heritage-page-section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  width: 100%;
+  margin-top: 10vh;
+  min-height: 90vh;
+}
+
+.heritage-page-section2-LHS {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 50px;
+}
+
+.heritage-page-section2-LHS-maintypo {
+  font-size: 42px;
+  width: 100%;
+}
+
+.heritage-page-section2-LHS-longtypo {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.heritage-page-section2-LHS-longtypo-link {
+  /* text-decoration: underline; */
+  border-bottom: 2px solid #3a7d42;
+  padding: 0;
+  transition-duration: 0.4s;
+}
+
+.heritage-page-section2-LHS-longtypo-link:hover {
+  border-bottom: 2px solid black;
+  color: #3a7d42;
+}
+
+.heritage-page-section2-RHS {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heritage-page-section2-img {
+  background: url("https://res.cloudinary.com/farish/image/upload/v1626947139/Growmore/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 280px;
+  height: 467px;
+  margin: 0 50px;
+  border-radius: 25px;
+  justify-content: flex-end;
+  padding: 20px 0;
+  box-shadow: 4px 4px 10px darkgray;
+}
+
+.heritage-page-section2-architect {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .heritage-page-section2 {
+    flex-direction: column;
+  }
+
+  .heritage-page-section2-LHS {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .heritage-page-section2-RHS {
+    width: 100%;
+  }
+}

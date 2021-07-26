@@ -7,6 +7,11 @@ export default class Header extends PureComponent {
   render() {
     const menuItems = [
       {
+        name: "Home",
+        loc: "/",
+        exact: true,
+      },
+      {
         name: "Projects",
         loc: "/projects",
       },
@@ -19,7 +24,7 @@ export default class Header extends PureComponent {
         loc: "/heritage",
       },
       {
-        name: "Vasthu",
+        name: "Vasthushastra",
         loc: "/vasthu",
       },
     ];

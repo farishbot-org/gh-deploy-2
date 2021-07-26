@@ -39,7 +39,7 @@ export default class Enquire extends PureComponent {
       <div className="enquire-section">
         <div className="enquire-section-typo-section">
           <span className="enquire-section-typo-main">{ctaMessage}</span>
-          <span className="enquire-section-typo-cta">Talk to our team today.</span>
+          <span className="enquire-section-typo-cta">Talk to our team now.</span>
         </div>
         <div className="enquire-section-cta-button-section">
           <Link to={subject ? `/contact/?${subject}` : "/contact"} className="enquire-section-cta-button">Enquire</Link>

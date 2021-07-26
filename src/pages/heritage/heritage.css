@@ -1,7 +1,6 @@
-.heritage-page{
-    /* background: lavender; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.heritage-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

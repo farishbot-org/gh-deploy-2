@@ -7,16 +7,15 @@
 }
 
 .careers-page-hero {
-  height: 30vh;
+  height: 50vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
-  background: url('https://res.cloudinary.com/farish/image/upload/v1626501233/Growmore/DD_Hosp_Kaaki_2_pmxrc2.jpg');
+  background: url("https://res.cloudinary.com/farish/image/upload/v1627205554/Growmore/mario-gogh-VBLHICVh-lI-unsplash_ckfspu.jpg");
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }

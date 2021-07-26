@@ -19,7 +19,7 @@ export default class Section3 extends PureComponent {
     return (
       <div className="vasthu-page-section3">
         <span className="vasthu-page-section3-heading">Designed by India's leading Vasthushastra Family</span>
-        <img title="Click to visit Kanippayyur Famil's website." onClick={this.onClickKanippayyurLogo} className="kanippayyur-logo" src={Logo} alt="logo" />
+        <img title="Click to visit Kanippayyur Family's website." onClick={this.onClickKanippayyurLogo} className="kanippayyur-logo" src={Logo} alt="logo" />
       </div>
     );
   }
