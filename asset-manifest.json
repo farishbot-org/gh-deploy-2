@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.02fd56ea.chunk.css",
-    "main.js": "/static/js/main.1ae04f12.chunk.js",
+    "main.css": "/static/css/main.8eb84b77.chunk.css",
+    "main.js": "/static/js/main.120decb0.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.d73cd8d8.js",
     "static/css/2.a6a3cbde.chunk.css": "/static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.291f87ce.chunk.js": "/static/js/2.291f87ce.chunk.js",
+    "static/js/2.7e61a2ef.chunk.js": "/static/js/2.7e61a2ef.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.291f87ce.chunk.js.LICENSE.txt": "/static/js/2.291f87ce.chunk.js.LICENSE.txt",
+    "static/js/2.7e61a2ef.chunk.js.LICENSE.txt": "/static/js/2.7e61a2ef.chunk.js.LICENSE.txt",
     "static/media/kannipayyur.85ff121f.svg": "/static/media/kannipayyur.85ff121f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d73cd8d8.js",
     "static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.291f87ce.chunk.js",
-    "static/css/main.02fd56ea.chunk.css",
-    "static/js/main.1ae04f12.chunk.js"
+    "static/js/2.7e61a2ef.chunk.js",
+    "static/css/main.8eb84b77.chunk.css",
+    "static/js/main.120decb0.chunk.js"
   ]
 }
