@@ -1,8 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 
 import Loading from "../../../components/loading/Loading";
+import { driveFetch, tabs } from "../../../utils/drive/driveFetch";
 import Error404 from "../../404/Error404";
 
 import "./projectcontent.css";
@@ -21,26 +22,31 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   };
 
   useEffect(() => {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/", {
-      params: {
-        id: match.params.id,
-      },
-    })
+    driveFetch(tabs.projects)
       .then((response) => {
-        if (response.data) {
-          const {
-            name, images: imageURLs,
-          } = response.data;
+        if (response) {
+          const project = response.filter((obj) => obj.id === match.params.id)[0];
+          if (!project) return setExisting(false);
 
-          setImages(imageURLs);
+          const {
+            project_name: name, image_urls: imageURLs,
+          } = project;
+
+          setImages(imageURLs.split(","));
           setExisting(true);
-          setProjectData(response.data);
-          setTimeout(() => {
-            setSiteTitle(name);
-          }, 1000 / 10);
-        } else {
-          setExisting(false);
+          setProjectData({
+            name: project.project_name,
+            location: project.project_location,
+            architect: project.architect,
+            client: project.client,
+            year: project.year,
+            description: project.description,
+          });
+
+          return setSiteTitle(name);
         }
+
+        return setExisting(false);
       })
       .catch(() => setExisting(false));
 
@@ -91,7 +97,7 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
               Year:
               {" "}
             </span>
-            <span>{projectData.date}</span>
+            <span>{projectData.year}</span>
           </div>
           <div className="project-info-description">
             <span>{projectData.description}</span>
@@ -108,7 +114,7 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   }
 
   return (
-    <Loading message={`Loading Project Data ${match.params.id}`} />
+    <Loading message={`Loading Project ${match.params.id}`} />
   );
 };
 

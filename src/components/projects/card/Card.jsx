@@ -6,7 +6,7 @@ import "./card.css";
 export default class Card extends PureComponent {
   render() {
     const {
-      id, name, image, location,
+      id, name, location, image,
     } = this.props;
 
     return (

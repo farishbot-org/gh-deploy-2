@@ -32,6 +32,7 @@ function App() {
 
   useEffect(() => {
     checkMobile();
+    // window.location = "https://amnuz.org"; // remove this line upon deployment
   }, []);
 
   const routes = [

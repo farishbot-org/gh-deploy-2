@@ -1,12 +1,13 @@
 import React, { PureComponent } from "react";
 import { Fade } from "react-slideshow-image";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import Chance from "chance";
 
 import "./hero.css";
 
 import Error500 from "../../../pages/500/Error500";
 import Loading from "../../loading/Loading";
+import { driveFetch, tabs } from "../../../utils/drive/driveFetch";
 
 export default class Hero extends PureComponent {
   constructor(props) {
@@ -19,21 +20,23 @@ export default class Hero extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner")
+    const chanceObj = new Chance();
+
+    driveFetch(tabs.projects, true)
       .then((response) => {
         const data = [];
 
-        response.data.forEach((project) => {
+        response.forEach((project) => {
           const {
-            name, location, id, image, key,
+            project_name: name, project_location: location, id, image_urls: images,
           } = project;
 
           const pushData = {
             name,
-            key,
             id,
-            link: image,
+            link: images.split(",")[0],
             location,
+            key: chanceObj.guid(),
           };
 
           data.push(pushData);
@@ -43,13 +46,11 @@ export default class Hero extends PureComponent {
           sliderItems: data,
         });
       })
-      .catch((err) => {
-        const { response } = err;
-
+      .catch(() => {
         this.setState({
           error: {
-            code: response.status || "503",
-            message: response.data.message || "Internal Server Error",
+            code: "503",
+            message: "Internal Server Error",
           },
         });
       });
