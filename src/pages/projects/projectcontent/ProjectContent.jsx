@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 
 import Loading from "../../../components/loading/Loading";
-import { driveFetch, tabs } from "../../../utils/drive/driveFetch";
 import Error404 from "../../404/Error404";
+
+import driveConfig from "../../../utils/drive/driveFetch";
 
 import "./projectcontent.css";
 
@@ -22,6 +23,8 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   };
 
   useEffect(() => {
+    const { driveFetch, tabs } = driveConfig;
+
     driveFetch(tabs.projects)
       .then((response) => {
         if (response) {

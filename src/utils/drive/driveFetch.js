@@ -1,10 +1,12 @@
-const { default: axios } = require("axios");
-const csvtojson = require("csvtojson");
-const Chance = require("chance");
+import { axios } from "axios";
+import csvtojson from "csvtojson";
+import Chance from "chance";
+
+// const { default: axios } = require("axios");
+// const csvtojson = require("csvtojson");
+// const Chance = require("chance");
 
 const cleanObject = require("../functions/cleanObject");
-
-const chanceObj = new Chance();
 
 const sheetId = "2PACX-1vR4JIS02bnIvKd1DffdE23uXVd2LfX3BE4SPnO_fVqbi2Vyhc6kDvQ6bkCsHPg7GNEIPqTtYgnPsJlo";
 
@@ -15,6 +17,8 @@ const tabs = {
 };
 
 const driveFetch = async (tab, shuffle) => {
+  const chanceObj = new Chance();
+
   const url = `https://docs.google.com/spreadsheets/d/e/${sheetId}/pub?gid=${tab}&single=true&output=csv`;
   const db = await axios.get(url, { headers: { "Cache-Control": "no-store" } }).then((result) => result.data);
   let json = await csvtojson().fromString(db);
@@ -33,4 +37,4 @@ const driveFetch = async (tab, shuffle) => {
   return json;
 };
 
-module.exports = { tabs, driveFetch };
+export default ({ driveFetch, tabs });

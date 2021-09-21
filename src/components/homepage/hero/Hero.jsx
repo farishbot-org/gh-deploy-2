@@ -7,7 +7,8 @@ import "./hero.css";
 
 import Error500 from "../../../pages/500/Error500";
 import Loading from "../../loading/Loading";
-import { driveFetch, tabs } from "../../../utils/drive/driveFetch";
+
+import driveConfig from "../../../utils/drive/driveFetch";
 
 export default class Hero extends PureComponent {
   constructor(props) {
@@ -21,6 +22,7 @@ export default class Hero extends PureComponent {
 
   componentDidMount() {
     const chanceObj = new Chance();
+    const { driveFetch, tabs } = driveConfig;
 
     driveFetch(tabs.projects, true)
       .then((response) => {

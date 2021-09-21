@@ -3,7 +3,7 @@ import React, { PureComponent } from "react";
 import Moment from "moment-timezone";
 import Chance from "chance";
 
-import { driveFetch, tabs } from "../../../utils/drive/driveFetch";
+import driveConfig from "../../../utils/drive/driveFetch";
 
 import "./news.css";
 
@@ -17,6 +17,8 @@ export default class News extends PureComponent {
   }
 
   componentDidMount() {
+    const { driveFetch, tabs } = driveConfig;
+
     driveFetch(tabs.news)
       .then((response) => {
         if (response.length > 0) {

@@ -6,13 +6,15 @@ import CareerItem from "../../components/careers/careeritem/CareerItem";
 
 import "./careers.css";
 
-import { driveFetch, tabs } from "../../utils/drive/driveFetch";
+import driveConfig from "../../utils/drive/driveFetch";
 
 const Careers = ({ setSiteTitle }) => {
   const [loading, setLoading] = useState(true);
   const [careers, setCareers] = useState(null);
 
   const fetchCareers = () => {
+    const { driveFetch, tabs } = driveConfig;
+
     driveFetch(tabs.careers, true)
       .then((response) => {
         if (response && response.length > 0) {

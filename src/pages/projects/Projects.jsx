@@ -7,7 +7,7 @@ import Error500 from "../500/Error500";
 
 import "./projects.css";
 
-import { driveFetch, tabs } from "../../utils/drive/driveFetch";
+import driveConfig from "../../utils/drive/driveFetch";
 
 const Projects = ({ setSiteTitle, setSiteContent }) => {
   const [loading, setLoading] = useState(true);
@@ -16,6 +16,8 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
 
   useEffect(() => {
     setSiteTitle("Projects");
+
+    const { driveFetch, tabs } = driveConfig;
 
     driveFetch(tabs.projects)
       .then((response) => {
