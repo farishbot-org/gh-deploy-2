@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.8eb84b77.chunk.css",
-    "main.js": "/static/js/main.e0241f2b.chunk.js",
+    "main.js": "/static/js/main.5cc9ef47.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.d73cd8d8.js",
     "static/css/2.a6a3cbde.chunk.css": "/static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.61deb9fd.chunk.js": "/static/js/2.61deb9fd.chunk.js",
+    "static/js/2.c1078507.chunk.js": "/static/js/2.c1078507.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.61deb9fd.chunk.js.LICENSE.txt": "/static/js/2.61deb9fd.chunk.js.LICENSE.txt",
+    "static/js/2.c1078507.chunk.js.LICENSE.txt": "/static/js/2.c1078507.chunk.js.LICENSE.txt",
     "static/media/kannipayyur.85ff121f.svg": "/static/media/kannipayyur.85ff121f.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d73cd8d8.js",
     "static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.61deb9fd.chunk.js",
+    "static/js/2.c1078507.chunk.js",
     "static/css/main.8eb84b77.chunk.css",
-    "static/js/main.e0241f2b.chunk.js"
+    "static/js/main.5cc9ef47.chunk.js"
   ]
 }
