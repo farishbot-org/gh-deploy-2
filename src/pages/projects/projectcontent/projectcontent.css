@@ -93,3 +93,34 @@
   line-height: 1.5;
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 600px) {
+  .project-info-page {
+    flex-direction: column;
+    padding: 0;
+    height: 50%;
+  }
+
+  .project-info-LHS {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-info-each-slide-image {
+    width: 100%;
+  }
+
+  .project-info-RHS {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .project-info-name {
+    font-size: 38px;
+  }
+
+  .project-info-description {
+    border: none;
+    padding: 0;
+  }
+}

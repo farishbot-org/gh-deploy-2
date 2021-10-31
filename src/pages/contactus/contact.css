@@ -25,3 +25,10 @@
   opacity: 0.5;
   /* background: lavender; */
 }
+
+@media only screen and (max-width: 600px){
+
+  .contact-page-header-small{
+    width: 100%;
+  }
+}

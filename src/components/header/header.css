@@ -32,7 +32,7 @@
   margin: 0 8px;
   font-size: 16px;
   transition-duration: 0.4s;
-  letter-spacing: .03rem;
+  letter-spacing: 0.03rem;
 }
 
 .header-navlink:hover {
@@ -47,4 +47,63 @@
 .header-activenavlink:hover {
   color: #3a7d42;
   text-decoration: none;
+}
+
+.header-mobile-menu-button-section {
+  /* background: red; */
+  margin: 0 15px;
+}
+
+/* ============== */
+
+.mobile-menu {
+  height: 100vh;
+  touch-action: none;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  background: white;
+  width: 100%;
+}
+
+.mobile-menu-header {
+  height: 5vh;
+  padding: 15px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.mobile-menu-header-logo {
+  height: 100%;
+  /* width: 30px; */
+}
+
+.mobile-menu-close-button {
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.mobile-menu-navlinks-section {
+  /* background: red; */
+  height: 100%;
+  display: flex;
+  padding: 0 15px;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-menu-navlinks {
+  margin: 7px 0;
+  font-size: 32px;
+}
+.active-mobile-menu-navlinks {
+  font-weight: bold;
+  color: green;
 }

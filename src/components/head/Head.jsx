@@ -14,14 +14,22 @@ const Head = ({ title, content }) => {
       <meta name="description" content={content || "Founded in the middle of the 1990's when Growmore Structural Consultant first provided structural expertise to various leading consultants in Abu Dhabi and Dubai,"} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`https://growmore-website2.amnuz.com/${router.pathname}`} />
+      <meta property="og:url" content={`https://growmoreinternational.com/${router.pathname}`} />
       <meta property="og:title" content={title ? `${title} - Growmore International` : "Growmore International Engineering Consultants"} />
       <meta property="og:description" content={content || "Founded in the middle of the 1990's when Growmore Structural Consultant first provided structural expertise to various leading consultants in Abu Dhabi and Dubai,"} />
+      <meta
+        property="og:image"
+        content="/seo-img.jpg"
+      />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={`https://growmore-website2.amnuz.com/${router.pathname}`} />
+      <meta property="twitter:url" content={`https://growmoreinternational.com/${router.pathname}`} />
       <meta property="twitter:title" content={title ? `${title} - Growmore International` : "Growmore International Engineering Consultants"} />
       <meta property="twitter:description" content={content || "Founded in the middle of the 1990's when Growmore Structural Consultant first provided structural expertise to various leading consultants in Abu Dhabi and Dubai,"} />
+      <meta
+        property="twitter:image"
+        content="/seo-img.jpg"
+      />
     </Helmet>
   );
 };

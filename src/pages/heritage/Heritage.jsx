@@ -9,11 +9,13 @@ import Section3 from "../../components/heritage/section3/Section3";
 
 import Enquire from "../../components/enquire/Enquire";
 
-const Heritage = ({ setSiteTitle }) => {
+const Heritage = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
     setSiteTitle("Heritage");
+
     return () => {
       setSiteTitle(null);
+      setSiteContent(null);
     };
   }, []);
 

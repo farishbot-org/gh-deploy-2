@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Chance from "chance";
+// import Chance from "chance";
+import axios from "axios";
 
 import Card from "../../components/projects/card/Card";
 import Loading from "../../components/loading/Loading";
 import Error500 from "../500/Error500";
 
 import "./projects.css";
-
-import driveConfig from "../../utils/drive/driveFetch";
 
 const Projects = ({ setSiteTitle, setSiteContent }) => {
   const [loading, setLoading] = useState(true);
@@ -17,12 +16,10 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
     setSiteTitle("Projects");
 
-    const { driveFetch, tabs } = driveConfig;
-
-    driveFetch(tabs.projects)
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
-        if (response.length > 0) {
-          setProjects(response.reverse());
+        if (response.data.length > 0) {
+          setProjects(response.data);
         }
         setLoading(false);
       })
@@ -39,8 +36,6 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
     };
   }, []);
 
-  const chanceObj = new Chance();
-
   if (loading === false) {
     return (
       <div className="projects-page">
@@ -50,11 +45,11 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
         <div className="projects-page-projects-list">
           {projects.map((project) => (
             <Card
-              key={chanceObj.guid()}
+              key={project.key}
               id={project.id}
-              name={project.project_name}
-              image={project.image_urls.split(",")[0]}
-              location={project.project_location}
+              name={project.name}
+              image={project.image}
+              location={project.location}
             />
           ))}
         </div>

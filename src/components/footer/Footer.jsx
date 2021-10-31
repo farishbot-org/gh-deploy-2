@@ -101,7 +101,7 @@ const Footer = () => {
       </div>
       <div className="footer-copyright-section">
         <span className="footer-copyright">
-          © 2012 -
+          © 1996 -
           {" "}
           {new Date().getFullYear()}
           {" "}

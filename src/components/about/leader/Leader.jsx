@@ -7,15 +7,13 @@ export default class Leader extends PureComponent {
     return (
       <div className="about-page-leader-section">
         <div className="about-page-leader-section-heading">
-          <span>Meet Our Leader</span>
+          {/* <span>Meet Our Leader</span> */}
+          <span>Welcome to Growmore</span>
         </div>
         <div className="about-page-leader-section-divisions">
           <div className="about-page-leader-section-LHS">
             <div className="about-page-leader-section-quote-section">
               <span>
-                The Growmore International team takes pride in providing our clients
-                with empowerment. Therefore, we have handpicked our engineering team
-                to ensure they receive the best service.
                 The Growmore International team takes pride in providing our clients
                 with empowerment. Therefore, we have handpicked our engineering team
                 to ensure they receive the best service.
@@ -27,8 +25,8 @@ export default class Leader extends PureComponent {
             </div>
           </div>
           <div className="about-page-leader-section-RHS">
-            {/* <h2>leader</h2> */}
-            <img src="/leader.png" alt="leader" />
+            {/* <img src="/leader.png" alt="leader" /> */}
+            <img src="/Office Photo.jpg" hidden alt="leader" />
           </div>
         </div>
       </div>

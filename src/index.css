@@ -19,3 +19,9 @@ a {
   color: #3a7d42;
 }
 
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}

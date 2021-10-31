@@ -23,6 +23,7 @@ export default class Newsletter extends PureComponent {
 
   render() {
     const { email } = this.state;
+
     return (
       <div className="homepage-newsletter-section">
         <div className="homepage-newsletter-maintypo-section">

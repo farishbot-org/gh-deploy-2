@@ -1,5 +1,5 @@
 .vasthu-page-hero {
-  background: url("https://cf.jare.io/?u=https://res.cloudinary.com/farish/image/upload/v1626951990/Growmore/ashish-sangai-EjRTM6inhBM-unsplash_jereps.jpg");
+  background: url("./ashish-sangai-EjRTM6inhBM-unsplash_jereps.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -23,4 +23,11 @@
   background: whitesmoke;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .vasthu-page-hero-maintypo {
+    text-align: center;
+    font-size: 15px;
+  }
 }

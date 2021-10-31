@@ -60,3 +60,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .service-page-header-long {
+    width: 100%;
+  }
+}

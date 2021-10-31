@@ -1,14 +1,12 @@
 import React, { PureComponent } from "react";
 import { Fade } from "react-slideshow-image";
 import { Link } from "react-router-dom";
-import Chance from "chance";
+import axios from "axios";
 
 import "./hero.css";
 
 import Error500 from "../../../pages/500/Error500";
 import Loading from "../../loading/Loading";
-
-import driveConfig from "../../../utils/drive/driveFetch";
 
 export default class Hero extends PureComponent {
   constructor(props) {
@@ -21,24 +19,21 @@ export default class Hero extends PureComponent {
   }
 
   componentDidMount() {
-    const chanceObj = new Chance();
-    const { driveFetch, tabs } = driveConfig;
-
-    driveFetch(tabs.projects, true)
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         const data = [];
 
-        response.forEach((project) => {
+        response.data.forEach((project) => {
           const {
-            project_name: name, project_location: location, id, image_urls: images,
+            name, location, id, image, key,
           } = project;
 
           const pushData = {
             name,
             id,
-            link: images.split(",")[0],
+            link: image,
             location,
-            key: chanceObj.guid(),
+            key,
           };
 
           data.push(pushData);

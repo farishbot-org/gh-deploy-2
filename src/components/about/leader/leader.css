@@ -19,8 +19,9 @@
 
 .about-page-leader-section-heading {
   font-size: 32px;
-  margin: 50px 0 0 0;
+  margin: 50px 0 20px 0;
   font-weight: 900;
+
 }
 
 .about-page-leader-section-divisions {
@@ -64,11 +65,39 @@
 }
 
 .about-page-leader-section-RHS {
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 50%;
   height: 100%;
   padding: 0 5%;
+  background: url('./Office Photo.jpg');
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.about-page-leader-section-RHS img{
+  height: 250px;
+  /* height: 100%; */
+  background: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-page-leader-section {
+    margin-top: 150px;
+  }
+
+  .about-page-leader-section-divisions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-page-leader-section-LHS {
+    width: 80%;
+    margin-top: 20px;
+  }
 }

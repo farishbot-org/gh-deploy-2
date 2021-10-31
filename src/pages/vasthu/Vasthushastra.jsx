@@ -10,11 +10,14 @@ import Section3 from "../../components/vasthu/section3/Section3";
 
 import Enquire from "../../components/enquire/Enquire";
 
-const vasthushastra = ({ setSiteTitle }) => {
+const vasthushastra = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
-    setSiteTitle("vasthushastra");
+    setSiteTitle("Vasthushastra");
+    setSiteContent("An ancient system of building a positive home includes an assessment of the entrance to the house and a series of recommendations for the bedroom, bathroom, kitchen and courtyard.");
+
     return () => {
       setSiteTitle(null);
+      setSiteContent(null);
     };
   }, []);
 

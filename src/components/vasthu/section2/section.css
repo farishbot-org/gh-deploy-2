@@ -12,7 +12,7 @@
 .vasthu-page-section2-image {
   height: 50vh;
   width: 45%;
-  background: url("https://cf.jare.io/?u=https://res.cloudinary.com/farish/image/upload/v1626957194/Growmore/bedroom-vaastu-compliant-homes-in-india1_fbenja.jpg");
+  background: url("./bedroom-vaastu-compliant-homes-in-india1_fbenja.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -41,5 +41,25 @@
 
 .vasthu-page-section2-RHS-typo {
   width: 80%;
-  /* text-align: justify; */
+}
+
+@media only screen and (max-width: 600px) {
+  .vasthu-page-section2 {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+        margin-bottom: 0px;
+  }
+
+  .vasthu-page-section2-LHS {
+    width: 100%;
+  }
+
+  .vasthu-page-section2-LHS-maintypo {
+    font-size: 32px;
+  }
+
+  .vasthu-page-section2-image {
+    width: 100%;
+  }
 }

@@ -4,8 +4,14 @@
 }
 .page {
   overflow-x: hidden;
-  padding: 0 5% 5vh 5%;
   display: flex;
   min-height: 90vh;
   margin-top: 10vh;
+  padding: 0 5% 5vh 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .page {
+    padding: 0 10px;
+  }
 }

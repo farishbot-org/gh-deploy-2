@@ -3,7 +3,7 @@
   /* background: whitesmoke; */
   background: black;
   color: white;
-  height: 25vh;
+  min-height: 25vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,4 +20,14 @@
   font-weight: 500;
   font-size: 28px;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .vasthu-page-definition {
+    width: 100%;
+    margin: 10px 0;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 18px;
+  }
 }

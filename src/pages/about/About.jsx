@@ -9,6 +9,7 @@ import Careers from "../../components/about/careers/Careers";
 const About = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
     setSiteTitle("About Us");
+
     return () => {
       setSiteContent(null);
       setSiteTitle(null);

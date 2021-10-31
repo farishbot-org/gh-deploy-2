@@ -9,7 +9,7 @@ export default class Hero extends PureComponent {
         <span className="about-page-hero-header">Growmore International Engineering Consultants</span>
         <span className="about-page-hero-header-small">
           Among the largest engineering consulting firms, Growmore International has the industry's
-          best engineering team. Our team provides the most effective engineering solutions for your
+          best engineering team. Our team provides the most effective engineering solutions for our
           clients, ensuring they have an excellent experience. Having Growmore International on your
           side means you'll have access to some of the best engineers in the industry, ensuring you
           won't have to compromise on quality or be unable to introduce your innovations into the

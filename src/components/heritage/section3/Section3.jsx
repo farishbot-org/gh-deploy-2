@@ -2,20 +2,25 @@ import React, { PureComponent } from "react";
 
 import "./section.css";
 
+import Image1 from "./finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.jpg";
+import Image2 from "./zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.jpg";
+import Image3 from "./bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.jpg";
+import Image4 from "./drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.jpg";
+
 export default class Section3 extends PureComponent {
   render() {
     const images = [
       {
-        link: "https://res.cloudinary.com/farish/image/upload/v1627304514/Growmore/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.jpg",
+        link: Image1,
       },
       {
-        link: "https://res.cloudinary.com/farish/image/upload/v1627304534/Growmore/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.jpg",
+        link: Image2,
       },
       {
-        link: "https://res.cloudinary.com/farish/image/upload/v1627303087/Growmore/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.jpg",
+        link: Image3,
       },
       {
-        link: "https://res.cloudinary.com/farish/image/upload/v1627304299/Growmore/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.jpg",
+        link: Image4,
       },
     ];
 

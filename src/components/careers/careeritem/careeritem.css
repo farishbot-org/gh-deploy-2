@@ -108,3 +108,34 @@
   fill: black;
   color: black;
 }
+
+@media only screen and (max-width: 600px) {
+  .careers-page-list-item {
+    flex-direction: column;
+    min-height: 150px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .careers-page-list-item-position {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .careers-page-list-item-centre-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .careers-page-list-item-mail {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    justify-content: center;
+  }
+}

@@ -57,3 +57,20 @@
   background: white;
   color: #3a7d42;
 }
+
+@media only screen and (max-width: 600px) {
+  .homepage-newsletter-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+  }
+  .homepage-newsletter-form-input {
+    width: 100%;
+  }
+
+  .homepage-newsletter-form-submit {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

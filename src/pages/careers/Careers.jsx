@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Chance from "chance";
+import axios from "axios";
 
 import Loading from "../../components/loading/Loading";
 import CareerItem from "../../components/careers/careeritem/CareerItem";
 
 import "./careers.css";
 
-import driveConfig from "../../utils/drive/driveFetch";
-
-const Careers = ({ setSiteTitle }) => {
+const Careers = ({ setSiteTitle, setSiteContent }) => {
   const [loading, setLoading] = useState(true);
   const [careers, setCareers] = useState(null);
 
   const fetchCareers = () => {
-    const { driveFetch, tabs } = driveConfig;
-
-    driveFetch(tabs.careers, true)
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/careers/list", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
-        if (response && response.length > 0) {
-          setCareers(response);
+        if (response.data && response.data.length > 0) {
+          setCareers(response.data);
         }
         setLoading(false);
       });
@@ -29,11 +25,10 @@ const Careers = ({ setSiteTitle }) => {
     fetchCareers();
 
     return () => {
+      setSiteContent(null);
       setSiteTitle(null);
     };
   }, []);
-
-  const chanceObj = new Chance();
 
   if (!loading) {
     return (
@@ -46,11 +41,11 @@ const Careers = ({ setSiteTitle }) => {
         <div className="careers-page-list-section">
           {careers ? careers.map((data) => (
             <CareerItem
-              key={chanceObj.guid()}
+              key={data.key}
               position={data.position}
               location={data.location}
-              minYear={data.minimum_experience}
-              maxYear={data.maximum_experience}
+              minYear={data.minimumexperience}
+              maxYear={data.maximumexperience}
             />
           ))
             : <CareerItem noData />}

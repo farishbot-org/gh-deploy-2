@@ -5,7 +5,7 @@ import "./errorpage.css";
 
 const Error404 = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
-    setSiteTitle("Page Not Found");
+    setSiteTitle("404 - Page Not Found");
     setSiteContent(null);
 
     return () => {

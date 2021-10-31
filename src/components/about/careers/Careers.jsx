@@ -14,7 +14,8 @@ export default class Careers extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/careers")
+    // axios.get("https://amnuz.herokuapp.com/v1/growmore/careers")
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/careers/", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         if (response.data) {
           this.setState({

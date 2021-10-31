@@ -1,5 +1,4 @@
 .about-page-hero {
-
     height: 75vh;
   /* width: 100vw; */
   display: flex;
@@ -20,4 +19,14 @@
 .about-page-hero-header-small {
   width: 75%;
   font-size: 18px;
+}
+
+@media only screen and (max-width: 600px){
+ .about-page-hero{
+   height: 100vh;
+ } 
+
+ .about-page-hero-header-small{
+   text-align: justify;
+ }
 }

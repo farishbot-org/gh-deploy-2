@@ -1,11 +1,13 @@
 // import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
+import axios from "axios";
 
 import Loading from "../../../components/loading/Loading";
 import Error404 from "../../404/Error404";
 
-import driveConfig from "../../../utils/drive/driveFetch";
+// import driveFetch from "../../../utils/drive/driveFetch";
+// import tabs from "../../../utils/drive/tabs.json";
 
 import "./projectcontent.css";
 
@@ -23,29 +25,26 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   };
 
   useEffect(() => {
-    const { driveFetch, tabs } = driveConfig;
-
-    driveFetch(tabs.projects)
+    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/", { params: { id: match.params.id }, headers: { "Cache-Control": "no-store" } })
       .then((response) => {
-        if (response) {
-          const project = response.filter((obj) => obj.id === match.params.id)[0];
-          if (!project) return setExisting(false);
-
+        if (response.data) {
+          const project = response.data;
           const {
-            project_name: name, image_urls: imageURLs,
+            name, images: imageurls, description,
           } = project;
 
-          setImages(imageURLs.split(","));
+          setImages(imageurls);
           setExisting(true);
           setProjectData({
-            name: project.project_name,
-            location: project.project_location,
+            name,
+            description,
+            location: project.location,
             architect: project.architect,
             client: project.client,
-            year: project.year,
-            description: project.description,
+            year: project.date,
           });
 
+          setSiteContent(description);
           return setSiteTitle(name);
         }
 
@@ -54,6 +53,7 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
       .catch(() => setExisting(false));
 
     return () => {
+      setSiteContent(null);
       setSiteTitle(null);
     };
   }, []);

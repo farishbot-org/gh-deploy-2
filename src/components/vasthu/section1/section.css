@@ -1,6 +1,6 @@
 .vasthu-page-section {
   width: 100%;
-  margin:  10vh 0 5vh 0;
+  margin: 10vh 0 5vh 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,8 +10,8 @@
 
 .vasthu-page-section-image {
   height: 50vh;
-  width:45%;
-  background: url("https://cf.jare.io/?u=https://res.cloudinary.com/farish/image/upload/v1626954648/Growmore/brahmasthan-vaastu-home_dyc4sx.jpg");
+  width: 45%;
+  background: url("./brahmasthan-vaastu-home_dyc4sx.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -37,7 +37,29 @@
   margin: 20px 0;
 }
 
-.vasthu-page-section-RHS-typo{
-    width: 80%;
+.vasthu-page-section-RHS-typo {
+  width: 80%;
+  /* text-align: justify; */
+}
+
+@media only screen and (max-width: 600px) {
+  .vasthu-page-section {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: -50px;
+  }
+
+  .vasthu-page-section-image {
+    width: 100%;
+  }
+
+  .vasthu-page-section-RHS {
+    width: 100%;
+  }
+  .vasthu-page-section-RHS-maintypo {
     /* text-align: justify; */
+    font-size: 32px;
+  }
 }
