@@ -1,19 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.8eb84b77.chunk.css",
-    "main.js": "/static/js/main.79b4ac92.chunk.js",
+    "main.css": "/static/css/main.07cccbf8.chunk.css",
+    "main.js": "/static/js/main.18c31e27.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.d73cd8d8.js",
     "static/css/2.a6a3cbde.chunk.css": "/static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.c1078507.chunk.js": "/static/js/2.c1078507.chunk.js",
+    "static/js/2.293e22d1.chunk.js": "/static/js/2.293e22d1.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.c1078507.chunk.js.LICENSE.txt": "/static/js/2.c1078507.chunk.js.LICENSE.txt",
-    "static/media/kannipayyur.85ff121f.svg": "/static/media/kannipayyur.85ff121f.svg"
+    "static/js/2.293e22d1.chunk.js.LICENSE.txt": "/static/js/2.293e22d1.chunk.js.LICENSE.txt",
+    "static/media/section.css": "/static/media/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.d63e3278.jpg",
+    "static/media/heritage.css": "/static/media/4Vo5arvxRwY-unsplash_wnowbu.88fc4c07.jpg",
+    "static/media/hero.css": "/static/media/ashish-sangai-EjRTM6inhBM-unsplash_jereps.e6672f53.jpg",
+    "static/media/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.b8990c95.jpg": "/static/media/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.b8990c95.jpg",
+    "static/media/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.a08114a9.jpg": "/static/media/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.a08114a9.jpg",
+    "static/media/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.dc9e819b.jpg": "/static/media/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.dc9e819b.jpg",
+    "static/media/kannipayyur.85ff121f.svg": "/static/media/kannipayyur.85ff121f.svg",
+    "static/media/careers.css": "/static/media/mario-gogh-VBLHICVh-lI-unsplash_ckfspu.1229f47d.jpg",
+    "static/media/maxresdefault_tdhibw.e8003b6f.jpg": "/static/media/maxresdefault_tdhibw.e8003b6f.jpg",
+    "static/media/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.e2971431.jpg": "/static/media/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.e2971431.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d73cd8d8.js",
     "static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.c1078507.chunk.js",
-    "static/css/main.8eb84b77.chunk.css",
-    "static/js/main.79b4ac92.chunk.js"
+    "static/js/2.293e22d1.chunk.js",
+    "static/css/main.07cccbf8.chunk.css",
+    "static/js/main.18c31e27.chunk.js"
   ]
 }
