@@ -69,7 +69,7 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
           >
             {images.map((image) => (
               <div key={image} className="project-info-each-slide">
-                <div className="project-info-each-slide-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${image}`})` }} />
+                <div className="project-info-each-slide-image" style={{ backgroundImage: `url(${image})` }} />
               </div>
             ))}
           </Slide>

@@ -10,8 +10,8 @@ export default class ContactInformation extends PureComponent {
         </div>
         <div className="contact-page-contact-section-LHS-paragraph">
           <span>
-            With a highly motivated team, we are highly determined to offer you the
-            best service possible in the shortest amount of time possible.
+            Thanks to our highly motivated team, we strive to provide you
+            with the best service possible within the most reasonable amount of time.
           </span>
         </div>
         <div className="contact-page-contact-section-LHS-contact-list">

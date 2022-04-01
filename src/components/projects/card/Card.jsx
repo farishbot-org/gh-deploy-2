@@ -11,7 +11,7 @@ export default class Card extends PureComponent {
 
     return (
       <Link to={`/projects/${id}`} title={name} className="projects-page-project-item">
-        <div className="projects-page-project-item-image" style={image ? { backgroundImage: `url(${`https://cf.jare.io/?u=${image}`})` } : { background: "white" }} />
+        <div className="projects-page-project-item-image" style={image ? { backgroundImage: `url(${image})` } : { background: "white" }} />
         <div className="projects-page-project-item-data-section">
           <div className="projects-page-project-item-name-section">
             <div className="projects-page-project-item-name">{name}</div>

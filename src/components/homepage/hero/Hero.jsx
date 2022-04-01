@@ -68,13 +68,13 @@ export default class Hero extends PureComponent {
       <div className="hero-section">
         <Fade
           autoplay
-          arrows={false}
           indicators
+          arrows={false}
           pauseOnHover={false}
         >
           {sliderItems.map((image) => (
             <div key={image.key} className="each-slide">
-              <div className="each-slide-image" style={{ backgroundImage: `url(${`https://cf.jare.io/?u=${image.link}`})` }}>
+              <div className="each-slide-image" style={{ backgroundImage: `url(${image.link})` }}>
                 <Link className="each-slide-image-info" to={`/projects/${image.id}`}>
                   <span className="each-slide-image-info-title">{image.name}</span>
                   <span className="each-slide-image-info-location">{image.location}</span>
