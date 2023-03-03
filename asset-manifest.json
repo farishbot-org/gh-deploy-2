@@ -1,29 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.0708e957.chunk.css",
-    "main.js": "/static/js/main.420c8f06.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.d73cd8d8.js",
-    "static/css/2.a6a3cbde.chunk.css": "/static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.293e22d1.chunk.js": "/static/js/2.293e22d1.chunk.js",
-    "index.html": "/index.html",
-    "static/js/2.293e22d1.chunk.js.LICENSE.txt": "/static/js/2.293e22d1.chunk.js.LICENSE.txt",
-    "static/media/section.css": "/static/media/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.d63e3278.jpg",
-    "static/media/heritage.css": "/static/media/4Vo5arvxRwY-unsplash_wnowbu.88fc4c07.jpg",
-    "static/media/leader.css": "/static/media/Office Photo.2d4c2871.jpg",
-    "static/media/hero.css": "/static/media/ashish-sangai-EjRTM6inhBM-unsplash_jereps.e6672f53.jpg",
-    "static/media/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.b8990c95.jpg": "/static/media/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.b8990c95.jpg",
-    "static/media/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.a08114a9.jpg": "/static/media/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.a08114a9.jpg",
-    "static/media/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.dc9e819b.jpg": "/static/media/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.dc9e819b.jpg",
-    "static/media/kannipayyur.85ff121f.svg": "/static/media/kannipayyur.85ff121f.svg",
-    "static/media/careers.css": "/static/media/mario-gogh-VBLHICVh-lI-unsplash_ckfspu.1229f47d.jpg",
-    "static/media/maxresdefault_tdhibw.e8003b6f.jpg": "/static/media/maxresdefault_tdhibw.e8003b6f.jpg",
-    "static/media/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.e2971431.jpg": "/static/media/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.e2971431.jpg"
+    "main.css": "/static/css/main.ad64a02f.css",
+    "main.js": "/static/js/main.9df15a37.js",
+    "static/media/Office Photo.jpg": "/static/media/Office Photo.2d4c28714511717a4d9a.jpg",
+    "static/media/ashish-sangai-EjRTM6inhBM-unsplash_jereps.jpg": "/static/media/ashish-sangai-EjRTM6inhBM-unsplash_jereps.e6672f53ad2d9c3800d4.jpg",
+    "static/media/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.jpg": "/static/media/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.d63e32785a5070e01be2.jpg",
+    "static/media/4Vo5arvxRwY-unsplash_wnowbu.jpg": "/static/media/4Vo5arvxRwY-unsplash_wnowbu.88fc4c073788d1facfdc.jpg",
+    "static/media/mario-gogh-VBLHICVh-lI-unsplash_ckfspu.jpg": "/static/media/mario-gogh-VBLHICVh-lI-unsplash_ckfspu.1229f47db7dc3a96c04b.jpg",
+    "static/media/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.jpg": "/static/media/bamboo_double_storey_women_centre_yasmeenlari_barefoot_economy_architectural_review_ar_sindh_province_201115_5_3391593-1024x768_fj0uoc.b8990c95bdeba9e879e1.jpg",
+    "static/media/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.jpg": "/static/media/zerocarbon_cultural_centre_makli_201519_yasmeen_lari_zc3aerialview_0_372186422-1024x576_pjx5fd.e2971431f8145f78b92a.jpg",
+    "static/media/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.jpg": "/static/media/finance_and_trade_centre_karachi_1989_yasmeen_lari_barefoot_economy_architectural_review_399455576-1024x683_i4ltbc.dc9e819b9750a695821f.jpg",
+    "static/media/1280px-Yasmeen_Lari_Houses_kuvleb.jpg": "/static/media/1280px-Yasmeen_Lari_Houses_kuvleb.b71066f2aa8017e244b5.jpg",
+    "static/media/kannipayyur.svg": "/static/media/kannipayyur.85ff121f2afe8e7790c2ebdad9a644bc.svg",
+    "static/media/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.jpg": "/static/media/drr_flood_response_shelters_bamboo_201011_yasmeenlari_barefoot_economy_architectural_review_ar_dscn1658_352654596-1024x510_bebzry.a08114a98f256f9c9975.jpg",
+    "static/media/brahmasthan-vaastu-home_dyc4sx.jpg": "/static/media/brahmasthan-vaastu-home_dyc4sx.dc96cb8ee2e34ddf72da.jpg",
+    "static/media/bedroom-vaastu-compliant-homes-in-india1_fbenja.jpg": "/static/media/bedroom-vaastu-compliant-homes-in-india1_fbenja.5d0b7d0d17990723bbb3.jpg",
+    "static/media/maxresdefault_tdhibw.jpg": "/static/media/maxresdefault_tdhibw.e8003b6fc925c0e2a94d.jpg",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/js/runtime-main.d73cd8d8.js",
-    "static/css/2.a6a3cbde.chunk.css",
-    "static/js/2.293e22d1.chunk.js",
-    "static/css/main.0708e957.chunk.css",
-    "static/js/main.420c8f06.chunk.js"
+    "static/css/main.ad64a02f.css",
+    "static/js/main.9df15a37.js"
   ]
 }
