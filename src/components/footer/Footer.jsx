@@ -3,7 +3,7 @@ import "./footer.css";
 import { NavLink, useLocation } from "react-router-dom";
 import contactInfo from "../../config/contactInfo";
 
-const Footer = () => {
+function Footer() {
   const router = useLocation();
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
           {websiteMenu.map((item) => (
             <span key={item.location} className="footer-body-section-navlink">
-              <NavLink exact={item.exact} to={item.location}>
+              <NavLink to={item.location}>
                 {item.name}
               </NavLink>
             </span>
@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
           {companyMenu.map((item) => (
             <span key={item.location} className="footer-body-section-navlink">
-              <NavLink exact={item.exact} to={item.location}>
+              <NavLink to={item.location}>
                 {item.name}
               </NavLink>
             </span>
@@ -113,6 +113,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Footer;

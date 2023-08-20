@@ -19,7 +19,7 @@ export default class Hero extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list/banner", { headers: { "Cache-Control": "no-store" } })
+    axios.get("https://server.amnuz.com/v1/growmore/projects/list/banner", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         const data = [];
 

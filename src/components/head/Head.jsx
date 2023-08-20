@@ -1,8 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import isdev from "isdev";
 
-const Head = ({ title, content }) => {
+function Head({ title, content }) {
   const router = useLocation();
 
   return (
@@ -26,13 +27,11 @@ const Head = ({ title, content }) => {
       <meta property="twitter:image" content="/seo-img.jpg" />
       <noscript>You need to enable JavaScript to run this website.</noscript>
       <script src="/404.js" type="text/javascript" />
-      {navigator.userAgent !== "ReactSnap" ? (
+      {navigator.userAgent !== "ReactSnap" && !isdev && (
         <script src="//code.tidio.co/4hcrqur7ua3zsh3s6no2vuvmf2pa42rg.js" async />
-      ) : (
-        <script />
       )}
     </Helmet>
   );
-};
+}
 
 export default Head;

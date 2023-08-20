@@ -18,7 +18,7 @@ export default class News extends PureComponent {
   }
 
   componentDidMount() {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/news", { headers: { "Cache-Control": "no-store" } })
+    axios.get("https://server.amnuz.com/v1/growmore/news", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         if (response.data.length > 0) {
           this.setState({

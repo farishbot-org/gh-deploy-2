@@ -1,5 +1,5 @@
 import React from "react";
-import { hydrate, render } from "react-dom";
+import { createRoot, hydrateRoot } from "react-dom/client";
 
 import "./index.css";
 
@@ -8,7 +8,10 @@ import App from "./App";
 const rootElement = document.getElementById("root");
 
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  const container = document.getElementById("root");
+  hydrateRoot(container, <App />);
 } else {
-  render(<App />, rootElement);
+  const container = document.getElementById("root");
+  const root = createRoot(container);
+  root.render(<App />);
 }

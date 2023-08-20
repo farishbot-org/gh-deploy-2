@@ -6,7 +6,7 @@ import Hero from "../../components/about/hero/Hero";
 import Leader from "../../components/about/leader/Leader";
 import Careers from "../../components/about/careers/Careers";
 
-const About = ({ setSiteTitle, setSiteContent }) => {
+function About({ setSiteTitle, setSiteContent }) {
   useEffect(() => {
     setSiteTitle("About Us");
 
@@ -23,6 +23,6 @@ const About = ({ setSiteTitle, setSiteContent }) => {
       <Careers />
     </div>
   );
-};
+}
 
 export default About;

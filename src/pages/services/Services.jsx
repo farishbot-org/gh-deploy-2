@@ -4,7 +4,7 @@ import "./services.css";
 
 import ServiceCard from "../../components/services/service card/ServiceCard";
 
-const Services = ({ setSiteTitle, setSiteContent }) => {
+function Services({ setSiteTitle, setSiteContent }) {
   useEffect(() => {
     setSiteTitle("Services");
     setSiteContent("With the expertise to help you get laser-focused on what will make your project stand out. By providing you with a talented design and engineering team, you will be able to grow and progress faster");
@@ -149,6 +149,6 @@ const Services = ({ setSiteTitle, setSiteContent }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Services;

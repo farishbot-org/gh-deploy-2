@@ -26,7 +26,6 @@ export default class Header extends PureComponent {
       {
         name: "Home",
         loc: "/",
-        exact: true,
       },
       {
         name: "Projects",
@@ -78,8 +77,7 @@ export default class Header extends PureComponent {
             {menuItems.map((item) => (
               <NavLink
                 className="mobile-menu-navlinks"
-                exact
-                activeClassName="active-mobile-menu-navlinks"
+                // activeClassName="active-mobile-menu-navlinks"
                 onClick={this.onClickMobileMenu}
                 to={item.loc}
               >
@@ -90,8 +88,7 @@ export default class Header extends PureComponent {
             {additionalMenuItems.map((item) => (
               <NavLink
                 className="mobile-menu-navlinks"
-                exact
-                activeClassName="active-mobile-menu-navlinks"
+                // activeClassName="active-mobile-menu-navlinks"
                 onClick={this.onClickMobileMenu}
                 to={item.loc}
               >
@@ -117,9 +114,8 @@ export default class Header extends PureComponent {
           {menuItems.map((item) => (
             <NavLink
               key={item.loc}
-              exact={item.exact}
               to={item.loc}
-              activeClassName="header-activenavlink"
+              // activeClassName="header-activenavlink"
               className="header-navlink"
             >
               {item.name}
@@ -129,7 +125,7 @@ export default class Header extends PureComponent {
         <div
           onClick={this.onClickMobileMenu}
           hidden={!mobile}
-          className={!mobile ? null : "header-mobile-menu-button-section"}
+          className={!mobile ? "" : "header-mobile-menu-button-section"}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" /></svg>
         </div>

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import "./contact.css";
 
 import ContactSection from "../../components/contact/ContactSection";
 
-const ContactUs = ({ setSiteTitle, setSiteContent, location }) => {
+function ContactUs({ setSiteTitle, setSiteContent }) {
   const [subject, setSubject] = useState(null);
+
+  const router = useLocation();
   useEffect(() => {
     setSiteTitle("Contact Us");
     setSiteContent("Contact us for your enquiries.");
-    const { search } = location;
+    const { search } = router;
     if (search) setSubject(search.replace("?", ""));
 
     return () => {
@@ -27,6 +30,6 @@ const ContactUs = ({ setSiteTitle, setSiteContent, location }) => {
       <ContactSection existingSubject={subject} />
     </div>
   );
-};
+}
 
 export default ContactUs;

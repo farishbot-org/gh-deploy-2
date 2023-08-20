@@ -1,5 +1,6 @@
 // import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Slide } from "react-slideshow-image";
 import axios from "axios";
 
@@ -11,10 +12,12 @@ import Error404 from "../../404/Error404";
 
 import "./projectcontent.css";
 
-const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
+function ProjectContent({ setSiteTitle, setSiteContent }) {
   const [existing, setExisting] = useState(null);
   const [images, setImages] = useState([]);
   const [projectData, setProjectData] = useState({});
+
+  const router = useLocation();
 
   const properties = {
     duration: 5000,
@@ -25,13 +28,12 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   };
 
   useEffect(() => {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/", { params: { id: match.params.id }, headers: { "Cache-Control": "no-store" } })
+    const id = router.pathname.split("/")[2];
+    axios.get("https://server.amnuz.com/v1/growmore/projects/", { params: { id }, headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         if (response.data) {
           const project = response.data;
-          const {
-            name, images: imageurls, description,
-          } = project;
+          const { name, images: imageurls, description } = project;
 
           setImages(imageurls);
           setExisting(true);
@@ -111,14 +113,10 @@ const ProjectContent = ({ setSiteTitle, setSiteContent, match }) => {
   }
 
   if (existing === false) {
-    return (
-      <Error404 setSiteTitle={setSiteTitle} setSiteContent={setSiteContent} />
-    );
+    return <Error404 setSiteTitle={setSiteTitle} setSiteContent={setSiteContent} />;
   }
 
-  return (
-    <Loading message={`Loading Project ${match.params.id}`} />
-  );
-};
+  return <Loading message="Loading Project" />;
+}
 
 export default ProjectContent;

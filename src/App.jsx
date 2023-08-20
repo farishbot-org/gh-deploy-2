@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes as Switch } from "react-router-dom";
 
 import "./App.css";
 import "react-slideshow-image/dist/styles.css";
@@ -98,16 +98,15 @@ function App() {
             {routes.map((route) => (
               <Route
                 key={route.path || "nopath"}
-                exact
                 path={route.path}
-                render={(props) => (
+                element={(
                   <route.render
-                    {...props}
+                    // {...props}
                     mobile={mobile}
                     setSiteTitle={setSiteTitle}
                     setSiteContent={setSiteContent}
                   />
-                )}
+)}
               />
             ))}
           </Switch>

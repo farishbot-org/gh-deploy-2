@@ -9,7 +9,7 @@ import Section3 from "../../components/heritage/section3/Section3";
 
 import Enquire from "../../components/enquire/Enquire";
 
-const Heritage = ({ setSiteTitle, setSiteContent }) => {
+function Heritage({ setSiteTitle, setSiteContent }) {
   useEffect(() => {
     setSiteTitle("Heritage");
 
@@ -28,6 +28,6 @@ const Heritage = ({ setSiteTitle, setSiteContent }) => {
       <Enquire subject="Heritage" />
     </div>
   );
-};
+}
 
 export default Heritage;

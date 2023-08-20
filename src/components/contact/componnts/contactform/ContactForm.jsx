@@ -91,7 +91,7 @@ export default class ContactForm extends PureComponent {
       name, company, email, phone, subject, message,
     };
 
-    axios.post("https://amnuz.herokuapp.com/v1/growmore/contact", data)
+    axios.post("https://server.amnuz.com/v1/growmore/contact", data)
       .then((response) => {
         if (response.data) {
           this.setState({
@@ -174,7 +174,9 @@ export default class ContactForm extends PureComponent {
           </div>
           <div className="contact-page-contact-section-RHS-forminput-item-line">
             <div className="contact-page-contact-section-RHS-forminput-item">
-              <label className="contact-page-contact-section-RHS-forminput-item-label">Message*</label>
+              <label className="contact-page-contact-section-RHS-forminput-item-label">
+                Message*
+              </label>
               <textarea
                 type="textarea"
                 disabled={disableForm}

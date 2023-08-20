@@ -6,12 +6,12 @@ import CareerItem from "../../components/careers/careeritem/CareerItem";
 
 import "./careers.css";
 
-const Careers = ({ setSiteTitle, setSiteContent }) => {
+function Careers({ setSiteTitle, setSiteContent }) {
   const [loading, setLoading] = useState(true);
   const [careers, setCareers] = useState(null);
 
   const fetchCareers = () => {
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/careers/list", { headers: { "Cache-Control": "no-store" } })
+    axios.get("https://server.amnuz.com/v1/growmore/careers/list", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         if (response.data && response.data.length > 0) {
           setCareers(response.data);
@@ -60,6 +60,6 @@ const Careers = ({ setSiteTitle, setSiteContent }) => {
   }
 
   return <Loading message="Loading Careers" />;
-};
+}
 
 export default Careers;

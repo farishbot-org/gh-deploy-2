@@ -8,7 +8,7 @@ import Error500 from "../500/Error500";
 
 import "./projects.css";
 
-const Projects = ({ setSiteTitle, setSiteContent }) => {
+function Projects({ setSiteTitle, setSiteContent }) {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
   useEffect(() => {
     setSiteTitle("Projects");
 
-    axios.get("https://amnuz.herokuapp.com/v1/growmore/projects/list", { headers: { "Cache-Control": "no-store" } })
+    axios.get("https://server.amnuz.com/v1/growmore/projects/list", { headers: { "Cache-Control": "no-store" } })
       .then((response) => {
         if (response.data.length > 0) {
           setProjects(response.data);
@@ -62,6 +62,6 @@ const Projects = ({ setSiteTitle, setSiteContent }) => {
   }
 
   return <Loading message="Loading Projects" />;
-};
+}
 
 export default Projects;

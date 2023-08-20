@@ -10,7 +10,7 @@ import HeritageBanner from "../../components/homepage/Heritage Banner/HeritageBa
 import Architects from "../../components/homepage/architects/Architects";
 import Newsletter from "../../components/homepage/newsletter/Newsletter";
 
-const Homepage = ({ setSiteTitle, setSiteContent }) => {
+function Homepage({ setSiteTitle, setSiteContent }) {
   useEffect(() => {
     setSiteTitle(null);
     setSiteContent(null);
@@ -37,6 +37,6 @@ const Homepage = ({ setSiteTitle, setSiteContent }) => {
       <Newsletter />
     </div>
   );
-};
+}
 
 export default Homepage;

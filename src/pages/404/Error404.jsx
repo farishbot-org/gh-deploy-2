@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate as useHistory } from "react-router-dom";
 
 import "./errorpage.css";
 
-const Error404 = ({ setSiteTitle, setSiteContent }) => {
+function Error404({ setSiteTitle, setSiteContent }) {
   useEffect(() => {
     setSiteTitle("404 - Page Not Found");
     setSiteContent(null);
@@ -16,7 +16,7 @@ const Error404 = ({ setSiteTitle, setSiteContent }) => {
   const router = useHistory();
 
   const onClickButton = () => {
-    router.replace("/");
+    router("/");
   };
 
   return (
@@ -25,6 +25,6 @@ const Error404 = ({ setSiteTitle, setSiteContent }) => {
       <button type="button" className="error-page-back-button" onClick={onClickButton}>Go Home</button>
     </div>
   );
-};
+}
 
 export default Error404;
