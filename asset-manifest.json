@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ad64a02f.css",
-    "main.js": "/static/js/main.9df15a37.js",
+    "main.js": "/static/js/main.a66a2508.js",
     "static/media/Office Photo.jpg": "/static/media/Office Photo.2d4c28714511717a4d9a.jpg",
     "static/media/ashish-sangai-EjRTM6inhBM-unsplash_jereps.jpg": "/static/media/ashish-sangai-EjRTM6inhBM-unsplash_jereps.e6672f53ad2d9c3800d4.jpg",
     "static/media/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.jpg": "/static/media/yasmeen-lari-portrait-heritage-foundation-sq_a_coiq9t.d63e32785a5070e01be2.jpg",
@@ -20,6 +20,6 @@
   },
   "entrypoints": [
     "static/css/main.ad64a02f.css",
-    "static/js/main.9df15a37.js"
+    "static/js/main.a66a2508.js"
   ]
 }
